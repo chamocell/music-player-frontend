@@ -1,16 +1,12 @@
 {
   "name": "music-player-frontend",
-  "version": "1.0.0",
   "description": "",
   "main": "src/index.js",
   "scripts": {
-    "lint": "prettier --write \"./src/**/*.{js,ts,jsx,tsx,json,md,css,sass}\"",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "predeploy": "",
-    "deploy": ""
+    "lint": "prettier --write \"./src/**/*.{js,ts,jsx,tsx,json,md,css,scss}\""
   },
   "repository": {
     "type": "git",
@@ -24,13 +20,16 @@
       "name": "Edixon Alberto",
       "email": "edixonalbertto@gmail.com",
       "url": "https://www.edixonalberto.com"
+    },
+    {
+      "name": "Pablo Verduzco",
+      "email": "pabloverduzcos@gmail.com"
     }
   ],
   "license": "UNLISENCED",
   "bugs": {
     "url": "https://github.com/faztdevelopers/music-player-frontend/issues"
   },
-  "homepage": "",
   "eslintConfig": {
     "extends": "react-app"
   },
@@ -39,8 +38,8 @@
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
     "axios": "^0.19.2",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1",
+    "react": "16.13.1",
+    "react-dom": "16.13.1",
     "react-scripts": "3.4.1"
   },
   "devDependencies": {
