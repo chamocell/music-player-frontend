@@ -6,7 +6,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "lint": "prettier --write \"./src/**/*.{js,ts,jsx,tsx,json,md,css,sass}\""
+    "lint": "prettier --write \"./src/**/*.{js,ts,jsx,tsx,json,md,css,scss}\""
   },
   "repository": {
     "type": "git",
