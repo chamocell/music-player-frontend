@@ -1,13 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-
-// Components
-import Button from './components/Button';
-
-function App() {
-  // This is just an example
-  return <Button />;
-}
+import './assets/sass/main.scss';
+import App from './App';
 
 ReactDOM.render(
   <React.StrictMode>
