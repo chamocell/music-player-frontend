@@ -52,7 +52,7 @@
     padding: 1rem;
     margin: 0.1rem;
     color: var(--nav-text-color);
-    font-weight: 500;
+    font-weight: var(--font-weight-md);
     min-width: 50%;
 
     &:hover {

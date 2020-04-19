@@ -8,6 +8,7 @@
 
 :root {
   --color-primary: #db1d40;
+  --font-weight-md: 500;
 }
 
 html {
@@ -35,7 +36,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-weight: 500;
+  font-weight: var(--font-weight-md);
 }
 
 button,
