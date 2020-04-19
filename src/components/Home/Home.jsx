@@ -19,7 +19,7 @@ function Home() {
     <div className="home">
       <CardTalent />
       <h1 className="titulo_home">Mis Favoritos</h1>
-      <SlideContainer slidesToShow={5} dots>
+      <SlideContainer slidesToShow={5.2} dots>
         {data.favoritos}
       </SlideContainer>
       <br></br>
