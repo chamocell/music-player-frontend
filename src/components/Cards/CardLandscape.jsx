@@ -152,9 +152,7 @@ const CardLandscape = ({
         tabIndex="0"
         onClick={e => {}}
         onFocus={e => {}}
-        onKeyUp={e => {
-          focusHandler(data);
-        }}
+        onKeyUp={e => {}}
       >
         <Paper elevation={0} className={classes.paper}>
           {novo && <Chip label="NOVO" className={classes.chip} />}
