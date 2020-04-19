@@ -8,20 +8,21 @@
   display: flex;
   flex-direction: column;
 
-  &-title {
-    color: var(--nav-text-color);
-    text-transform: uppercase;
-    letter-spacing: 0.2rem;
-    font-size: 2rem;
-    margin-bottom: 1rem;
-  }
-
+  &-title,
   &-heading {
     color: var(--nav-text-color);
     text-transform: uppercase;
+    margin-bottom: 1rem;
+  }
+
+  &-title {
+    letter-spacing: 0.2rem;
+    font-size: 2rem;
+  }
+
+  &-heading {
     letter-spacing: 0.1rem;
     font-size: 1.5rem;
-    margin-bottom: 1rem;
     padding-top: 2rem;
   }
 
