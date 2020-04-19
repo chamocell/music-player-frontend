@@ -4,6 +4,10 @@ import { Link } from 'react-router-dom';
 import React from 'react';
 
 function Sidebar(props) {
+  function toggleMusicPlayer() {
+    props.musicPlayerState.setActive(!props.musicPlayerState.active);
+  }
+
   return (
     <nav className="sidebar">
       {props.title && <h3 className="sidebar-title">{props.title}</h3>}
@@ -42,6 +46,7 @@ function Sidebar(props) {
           Text
         </SidebarItem>
       </SidebarItemList>
+      <button onClick={() => toggleMusicPlayer()}>Toggle Music Player</button>
     </nav>
   );
 }

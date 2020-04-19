@@ -1,0 +1,26 @@
+.music-player-box {
+  grid-column: 1 / -1;
+}
+
+.music-player {
+  --icon-size: 1.8rem;
+  background-color: var(--color-primary-dark);
+  display: grid;
+  grid-template-columns: repeat(5, auto);
+  justify-content: center;
+  gap: 4rem;
+  padding: 5rem;
+  align-items: center;
+
+  &-icon svg {
+    fill: #fff;
+    width: var(--icon-size);
+    height: var(--icon-size);
+    display: block;
+  }
+
+  &-icon--toggle-play svg {
+    width: calc(var(--icon-size) * 2);
+    height: calc(var(--icon-size) * 2);
+  }
+}

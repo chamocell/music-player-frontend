@@ -8,6 +8,7 @@
 
 :root {
   --color-primary: #db1d40;
+  --color-primary-dark: #b81432;
   --font-weight-md: 500;
 }
 
@@ -50,5 +51,6 @@ textarea {
 #root {
   height: 100vh;
   display: grid;
+  grid-template-rows: 1fr min-content;
   grid-template-columns: auto 1fr;
 }
