@@ -150,31 +150,8 @@ const CardLandscape = ({
           foco ? "active" : ""
           } ${data.href ? classes.category : ""}`}
         tabIndex="0"
-        onClick={e => {
-          e.preventDefault();
-
-          if (data.sendToPlay) {
-            sendToPlay(data.group_id);
-          } else if (clickHandler) {
-            return clickHandler();
-          } else {
-            history.push({
-              pathname: data.href || `/vcard/${data.group_id}`,
-              state: { menuSelect: match.url }
-            });
-          }
-        }}
-        onFocus={e => {
-          if (scrollToTop) {
-            const item =
-              e.currentTarget.parentNode.parentNode.parentNode.parentNode
-                .parentNode.parentNode.parentNode;
-            item.scrollIntoView(true);
-          }
-
-          // setFoco(true);
-          focusHandler(data);
-        }}
+        onClick={e => {}}
+        onFocus={e => {}}
         onKeyUp={e => {
           focusHandler(data);
         }}

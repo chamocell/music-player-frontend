@@ -202,17 +202,18 @@
     opacity: 1
 }
 .slick-dots li button:before {
-    font-size: 6px;
+    font-family: slick;
+    font-size: 40px;
     line-height: 20px;
     position: absolute;
     top: 0;
     left: 0;
     width: 20px;
     height: 20px;
-    content: 'â€¢';
+    content: "\2022";
     text-align: center;
     opacity: .25;
-    color: #000
+    color: #000;
 }
 .slick-dots li.slick-active button:before {
     opacity: .75;

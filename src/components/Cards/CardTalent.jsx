@@ -50,18 +50,19 @@ const useStyles = makeStyles(() => ({
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'center',
-    alignItems: 'center'
+    alignItems: 'flex-end',
+    padding: '20px'
   },
   cardTalent: ({ width, height, bgSize, borderRadius, image }) => ({
-    backgroundImage: `url(${image || imageDefault })`,
+    backgroundImage: `url(https://avatars3.githubusercontent.com/u/15000248?s=460&u=2e1dc6e71e73a162aef210b9807890c30bc48c1f&v=4)`,
     position: "relative",
     margin: height * 0.06,
     backgroundSize: bgSize || 'cover',
     backgroundPosition: "center",
     border: `1px solid ${theme && theme.palette && theme.palette.primary && theme.palette.primary.main}`,
     borderRadius: borderRadius || "50%",
-    height: height || 88,
-    width: width || 88,
+    height: height || 50,
+    width: width || 50,
 
     "&:hover": {
       width: width + width * 0.06,

@@ -67,7 +67,7 @@ const useStyles = makeStyles(() => ({
 		// }
 	}),
 	cardSearchImage: ({ bgSize, image }) => ({
-		backgroundImage: `url(${image || 'http://clarovideocdn5.clarovideo.net/pregeneracion//cms/images/202001/75478_Default_Passangers-now_16154434.jpg'})`,
+		backgroundImage: `url(${image || 'https://i.scdn.co/image/ab67616d00001e028b2c42026277efc3e058855b'})`,
 		position: 'relative',
 		backgroundSize: bgSize || 'cover',
 		width: '100%',
@@ -85,9 +85,9 @@ const useStyles = makeStyles(() => ({
 		fontSize: 16
 	}),
 	subTitle: ({ width }) => ({
-		color: theme.palette.fontColorPrimary,
+		color: theme.palette.fontColorPrimary.main,
 		width: width,
-		fontSize: 16
+		fontSize: 13
 	})
 }));
 
