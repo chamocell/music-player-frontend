@@ -131,7 +131,7 @@ const CardTalent = ({
         <Typography className={classes.typographyTitle} variant="body1">
           {title}
         </Typography>
-        {false && infoTalent && (
+        {true && infoTalent && (
           <Typography className={classes.typographyRol} variant="body2" noWrap>
             {infoTalent}
           </Typography>
