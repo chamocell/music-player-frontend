@@ -4,24 +4,25 @@
   padding: 3rem;
   width: 22rem;
   overflow-y: hidden;
-  background-color: #db1d40;
+  background-color: var(--color-primary);
   display: flex;
   flex-direction: column;
 
-  &-title {
-    color: var(--nav-text-color);
-    text-transform: uppercase;
-    letter-spacing: 0.2rem;
-    font-size: 2rem;
-    margin-bottom: 1rem;
-  }
-
+  &-title,
   &-heading {
     color: var(--nav-text-color);
     text-transform: uppercase;
+    margin-bottom: 1rem;
+  }
+
+  &-title {
+    letter-spacing: 0.2rem;
+    font-size: 2rem;
+  }
+
+  &-heading {
     letter-spacing: 0.1rem;
     font-size: 1.5rem;
-    margin-bottom: 1rem;
     padding-top: 2rem;
   }
 
@@ -51,7 +52,7 @@
     padding: 1rem;
     margin: 0.1rem;
     color: var(--nav-text-color);
-    font-weight: 500;
+    font-weight: var(--font-weight-md);
     min-width: 50%;
 
     &:hover {
