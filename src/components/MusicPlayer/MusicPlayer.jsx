@@ -19,9 +19,10 @@ function MusicPlayer(props) {
         <div className="music-player">
           <MusicPlayerIcon icon={<ShuffleIcon />} />
           <MusicPlayerIcon icon={<PreviousIcon />} />
-          <PlayPauseIcon
-            handleClick={togglePlaying}
+          <MusicPlayerIcon
             icon={state.playing ? <PauseIcon /> : <PlayIcon />}
+            extraClasses="music-player-icon--toggle-play"
+            onClick={togglePlaying}
           />
           <MusicPlayerIcon icon={<NextIcon />} />
           <MusicPlayerIcon icon={<RepeatIcon />} />
@@ -31,19 +32,9 @@ function MusicPlayer(props) {
   );
 }
 
-function PlayPauseIcon({ icon, handleClick }) {
+function MusicPlayerIcon({ icon, extraClasses, ...rest }) {
   return (
-    <MusicPlayerIcon
-      extraClasses="music-player-icon--toggle-play"
-      icon={icon}
-      onClick={handleClick}
-    />
-  );
-}
-
-function MusicPlayerIcon({ icon, extraClasses, onClick }) {
-  return (
-    <span onClick={onClick} className={'music-player-icon ' + extraClasses}>
+    <span {...rest} className={'music-player-icon ' + extraClasses}>
       {icon}
     </span>
   );
