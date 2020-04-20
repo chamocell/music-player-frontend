@@ -59,13 +59,12 @@ const useStyles = makeStyles(() => ({
     backgroundImage: `url(${image})`,
     position: "relative",
     margin: height * 0.06,
-    backgroundSize: bgSize || 230,
-    padding: 10,
+    backgroundSize: bgSize || '100%',
     border: `1px solid ${theme && theme.palette && theme.palette.primary && theme.palette.primary.main}`,
     borderRadius: borderRadius || 6,
     boxShadow: "0 3px 5px 2px rgba(0, 0, 0, .3)",
     height: height || 136,
-    width: width || 230,
+    width: width || '100%',
     display: "flex",
     justifyContent: "flex-start",
     alignItems: "flex-start",
@@ -113,6 +112,7 @@ const useStyles = makeStyles(() => ({
     background: theme && theme.palette && theme.palette.primary && theme.palette.primary.main,
     height: "auto",
     padding: 2,
+    margin: 5,
     boxShadow: "0 1px 4px 0 rgba(0,0,0,0.5)"
   },
   typography: ({ width }) => ({
@@ -125,7 +125,7 @@ const useStyles = makeStyles(() => ({
 const CardLandscape = ({
   novo = false,
   height = 130,
-  width = 230,
+  width = '100%',
   bgSize,
   borderRadius,
   title = false,
