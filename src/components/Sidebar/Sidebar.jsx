@@ -13,19 +13,13 @@ function Sidebar(props) {
       {props.title && <h3 className="sidebar-title">{props.title}</h3>}
       <SidebarItemList heading="Explore music">
         <SidebarItem href="/" icon={<SignalIcon />}>
-          Text
+          Inicio
         </SidebarItem>
-        <SidebarItem href="/" icon={<SignalIcon />}>
-          Text
+        <SidebarItem href="/album" icon={<SignalIcon />}>
+          Álbumes
         </SidebarItem>
-        <SidebarItem href="/" icon={<SignalIcon />}>
-          Text
-        </SidebarItem>
-        <SidebarItem href="/" icon={<SignalIcon />}>
-          Text
-        </SidebarItem>
-        <SidebarItem href="/" icon={<SignalIcon />}>
-          Text
+        <SidebarItem href="/artistas" icon={<SignalIcon />}>
+          Artistas
         </SidebarItem>
       </SidebarItemList>
 

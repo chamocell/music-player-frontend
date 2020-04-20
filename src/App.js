@@ -7,6 +7,7 @@ import Home from './components/Home';
 import Main from './components/Main';
 import Sidebar from './components/Sidebar';
 import MusicPlayer from './components/MusicPlayer';
+import Message from './components/Message';
 
 function App() {
   const [musicPlayerActive, setMusicPlayerActive] = useState(false);
@@ -26,7 +27,7 @@ function App() {
             <Home />
           </Route>
           <Route>
-            <p>Not found</p>
+            <Message height={400} children='NO ENCONTRADO' status='404' />
           </Route>
         </Switch>
       </Main>
