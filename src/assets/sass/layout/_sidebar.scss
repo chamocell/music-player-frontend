@@ -34,14 +34,11 @@
   }
 
   &-nav {
-    width: 100%;
     display: flex;
     list-style: none;
     font-size: 2rem;
     flex-direction: column;
     margin-bottom: 4rem;
-    width: 70%;
-    align-self: flex-end;
   }
 
   &-item {
@@ -57,9 +54,12 @@
     color: var(--nav-text-color);
     min-width: 50%;
     transition: all 0.2s;
+    border-radius: var(--border-radius);
+    outline: none;
 
     &--active,
-    &:hover {
+    &:hover,
+    &:focus {
       --nav-text-color: #ba0f22;
       background-color: #eec3c8;
     }

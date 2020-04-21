@@ -11,6 +11,7 @@
   --color-primary-dark: #b81432;
   --font-weight-md: 500;
   --font-weight-bold: 600;
+  --border-radius: 3px;
 }
 
 html {
@@ -53,5 +54,5 @@ textarea {
   height: 100vh;
   display: grid;
   grid-template-rows: 1fr min-content;
-  grid-template-columns: minmax(min-content, 36.5rem) 1fr;
+  grid-template-columns: minmax(min-content, 26rem) minmax(min-content, 1fr);
 }
