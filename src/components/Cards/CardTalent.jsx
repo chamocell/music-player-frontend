@@ -51,10 +51,10 @@ const useStyles = makeStyles(() => ({
     flexDirection: 'column',
     justifyContent: 'center',
     alignItems: 'flex-end',
-    padding: '20px'
+    //padding: '20px'
   },
   cardTalent: ({ width, height, bgSize, borderRadius, image }) => ({
-    backgroundImage: `url(https://avatars3.githubusercontent.com/u/15000248?s=460&u=2e1dc6e71e73a162aef210b9807890c30bc48c1f&v=4)`,
+    backgroundImage: `url(${image ? image : imageDefault})`,
     position: "relative",
     margin: height * 0.06,
     backgroundSize: bgSize || 'cover',
