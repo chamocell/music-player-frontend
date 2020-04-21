@@ -6,9 +6,7 @@ import { ReactComponent as PreviousIcon } from './../../assets/icons/previous.sv
 import { ReactComponent as RepeatIcon } from './../../assets/icons/repeat.svg';
 import { ReactComponent as ShuffleIcon } from './../../assets/icons/shuffle.svg';
 
-function MusicPlayer(props) {
-  const state = props.musicPlayerState;
-
+function MusicPlayer({ musicPlayerState: state }) {
   function togglePlaying() {
     state.setPlaying(!state.playing);
   }

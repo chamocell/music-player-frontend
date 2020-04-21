@@ -3,14 +3,14 @@ import { Link } from 'react-router-dom';
 
 import React from 'react';
 
-function Sidebar(props) {
+function Sidebar({ musicPlayerState, title }) {
   function toggleMusicPlayer() {
-    props.musicPlayerState.setActive(!props.musicPlayerState.active);
+    musicPlayerState.setActive(!musicPlayerState.active);
   }
 
   return (
     <nav className="sidebar">
-      {props.title && <h3 className="sidebar-title">{props.title}</h3>}
+      {title && <h3 className="sidebar-title">{title}</h3>}
       <SidebarItemList heading="Explore music">
         <SidebarItem href="/" icon={<SignalIcon />}>
           Text
@@ -51,21 +51,21 @@ function Sidebar(props) {
   );
 }
 
-function SidebarItemList(props) {
+function SidebarItemList({ heading, children }) {
   return (
     <ul className="sidebar-nav">
-      <h3 className="sidebar-heading">{props.heading}</h3>
-      {props.children}
+      <h3 className="sidebar-heading">{heading}</h3>
+      {children}
     </ul>
   );
 }
 
-function SidebarItem(props) {
+function SidebarItem({ href, icon, children }) {
   return (
     <li className="sidebar-item">
-      <Link className="sidebar-link" to={props.href}>
-        <span className="sidebar-icon">{props.icon}</span>
-        {props.children}
+      <Link className="sidebar-link" to={href}>
+        <span className="sidebar-icon">{icon}</span>
+        {children}
       </Link>
     </li>
   );
