@@ -1,5 +1,10 @@
-import { ReactComponent as SignalIcon } from './../../assets/icons/signal.svg';
-import { Link } from 'react-router-dom';
+// import { ReactComponent as SignalIcon } from './../../assets/icons/signal.svg';
+import { ReactComponent as HomeIcon } from './../../assets/icons/home.svg';
+import { ReactComponent as PictureIcon } from './../../assets/icons/image.svg';
+import { ReactComponent as UserIcon } from './../../assets/icons/user.svg';
+import { ReactComponent as MusicIcon } from './../../assets/icons/music.svg';
+
+import { NavLink } from 'react-router-dom';
 
 import React from 'react';
 
@@ -11,33 +16,21 @@ function Sidebar({ musicPlayerState, title }) {
   return (
     <nav className="sidebar">
       {title && <h3 className="sidebar-title">{title}</h3>}
-      <SidebarItemList heading="Explore music">
-        <SidebarItem href="/" icon={<SignalIcon />}>
+      <SidebarItemList heading="General">
+        <SidebarItem exact href="/" icon={<HomeIcon />}>
           Inicio
         </SidebarItem>
-        <SidebarItem href="/album" icon={<SignalIcon />}>
+        <SidebarItem href="/albums" icon={<PictureIcon />}>
           Álbumes
         </SidebarItem>
-        <SidebarItem href="/artistas" icon={<SignalIcon />}>
+        <SidebarItem href="/artists" icon={<UserIcon />}>
           Artistas
         </SidebarItem>
       </SidebarItemList>
 
-      <SidebarItemList heading="Explore music">
-        <SidebarItem href="/" icon={<SignalIcon />}>
-          Text
-        </SidebarItem>
-        <SidebarItem href="/" icon={<SignalIcon />}>
-          Text
-        </SidebarItem>
-        <SidebarItem href="/" icon={<SignalIcon />}>
-          Text
-        </SidebarItem>
-        <SidebarItem href="/" icon={<SignalIcon />}>
-          Text
-        </SidebarItem>
-        <SidebarItem href="/" icon={<SignalIcon />}>
-          Text
+      <SidebarItemList heading="Playlist">
+        <SidebarItem href="/favourites" icon={<MusicIcon />}>
+          Mis favoritas
         </SidebarItem>
       </SidebarItemList>
       <button onClick={() => toggleMusicPlayer()}>Toggle Music Player</button>
@@ -54,13 +47,18 @@ function SidebarItemList({ heading, children }) {
   );
 }
 
-function SidebarItem({ href, icon, children }) {
+function SidebarItem({ href, icon, children, ...rest }) {
   return (
     <li className="sidebar-item">
-      <Link className="sidebar-link" to={href}>
+      <NavLink
+        {...rest}
+        activeClassName="sidebar-link--active"
+        className="sidebar-link"
+        to={href}
+      >
         <span className="sidebar-icon">{icon}</span>
         {children}
-      </Link>
+      </NavLink>
     </li>
   );
 }

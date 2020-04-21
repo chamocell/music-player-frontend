@@ -21,7 +21,7 @@ function App() {
   };
   return (
     <Router>
-      <Sidebar musicPlayerState={musicPlayerState} title="App Name"></Sidebar>
+      <Sidebar musicPlayerState={musicPlayerState}></Sidebar>
       <Main>
         <Switch>
           <Route exact path="/">

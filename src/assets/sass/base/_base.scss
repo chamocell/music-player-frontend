@@ -7,9 +7,10 @@
 }
 
 :root {
-  --color-primary: #db1d40;
+  --color-primary: #ffffff;
   --color-primary-dark: #b81432;
   --font-weight-md: 500;
+  --font-weight-bold: 600;
 }
 
 html {
@@ -37,7 +38,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-weight: var(--font-weight-md);
+  font-weight: var(--font-weight-bold);
 }
 
 button,
@@ -52,5 +53,5 @@ textarea {
   height: 100vh;
   display: grid;
   grid-template-rows: 1fr min-content;
-  grid-template-columns: auto 1fr;
+  grid-template-columns: minmax(min-content, 36.5rem) 1fr;
 }
