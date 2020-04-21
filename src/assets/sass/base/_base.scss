@@ -54,5 +54,6 @@ textarea {
   height: 100vh;
   display: grid;
   grid-template-rows: 1fr min-content;
-  grid-template-columns: minmax(min-content, 26rem) minmax(min-content, 1fr);
+  // grid-template-columns: minmax(min-content, 26rem) minmax(min-content, 1fr);
+  grid-template-columns: minmax(min-content, 26rem) 1fr;
 }
