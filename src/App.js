@@ -27,8 +27,9 @@ function App() {
           <Route exact path="/">
             <Home />
           </Route>
-          <Route exact path="/artistas/:id">
-            <ArtistContainer />
+          <Route path="/artistas/:id" render={((props) => {
+            return <ArtistContainer {...props}/>
+          })}>
           </Route>
           <Route>
             <Message height={400} children='NO ENCONTRADO' status='404' />

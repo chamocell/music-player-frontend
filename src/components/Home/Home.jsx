@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import { Link } from 'react-router-dom';
 
 // Components
@@ -21,12 +21,12 @@ function Home() {
       data.favoritos.push(<CardLandscape key="" novo data='' image={'http://clarovideocdn1.clarovideo.net/pregeneracion//cms/images/202002/75549_Default_Legion-Now_03181244.jpg?size&imwidth=290'} />)
   }
 
-  const [artista, setArtista] = React.useState([]);
+  const [artista, setArtista] = useState([]);
 
-  React.useEffect(() => {
+  useEffect(() => {
     Artist.get('?results=50').then((res) => {
       setArtista(res);
-      })
+    })
   }, []);
 
   return (
@@ -40,7 +40,7 @@ function Home() {
           </SlideContainer>
       }
       <br></br>
-      <h1 className="titulo_home">Nuevos álbums</h1>
+      <h1 className="titulo_home">Álbumes más recientes</h1>
       <SlideContainer slidesToShow={4.2} dots>
         <CardSearch title="Mutter" subTitle="Rammstein" />
         <CardSearch title="Mutter" subTitle="Rammstein" />
@@ -49,7 +49,7 @@ function Home() {
       </SlideContainer>
 
       <br></br>
-      <h1 className="titulo_home">Nuevos sencillos</h1>
+      <h1 className="titulo_home">Sencillos más recientes</h1>
       <SlideContainer slidesToShow={4.2} dots>
         <CardSearch title="uno" subTitle="sub título"/>
         <CardSearch title="Mutter" subTitle="Rammstein" />
@@ -59,10 +59,10 @@ function Home() {
 
       <br></br>
       <h1 className="titulo_home">Artistas destacados</h1>
-      <SlideContainer slidesToShow={12} dots>
+      <SlideContainer slidesToShow={6}>
         {artista && artista.data && artista.data.results.map(e =>
-        <Link to={`/artistas/${e.id.value}`} key="">
-          <CardTalent key={e.id.value}  width={80} height={80} title={e.name.first} image={e.picture.medium} infoTalent={e.gender}/>
+        <Link to={`/artistas/${e.id.value}`} key={e.id.value}>
+          <CardTalent key={e.id.value}  width={150} height={150} title={e.name.first} image={e.picture.large} infoTalent='Artista' />
         </Link>
         )}
       </SlideContainer>

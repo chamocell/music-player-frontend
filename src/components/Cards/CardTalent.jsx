@@ -50,7 +50,7 @@ const useStyles = makeStyles(() => ({
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'center',
-    alignItems: 'flex-end',
+    alignItems: 'flex-start',
     //padding: '20px'
   },
   cardTalent: ({ width, height, bgSize, borderRadius, image }) => ({
