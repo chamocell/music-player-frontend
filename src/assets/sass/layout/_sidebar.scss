@@ -1,29 +1,32 @@
 .sidebar {
-  --nav-text-color: #f3f3f3;
+  --nav-text-color: #333;
 
-  padding: 3rem;
-  width: 22rem;
+  box-shadow: 0 1px 10px rgba(var(--nav-text-color), 1);
+
+  padding: 10rem 3rem;
   overflow-y: hidden;
   background-color: var(--color-primary);
   display: flex;
   flex-direction: column;
+  font-weight: var(--font-weight-bold);
 
   &-title,
   &-heading {
     color: var(--nav-text-color);
     text-transform: uppercase;
-    margin-bottom: 1rem;
+    padding-bottom: 1rem;
   }
 
   &-title {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
     letter-spacing: 0.2rem;
     font-size: 2rem;
+    margin-bottom: 2rem;
   }
 
   &-heading {
-    letter-spacing: 0.1rem;
     font-size: 1.5rem;
-    padding-top: 2rem;
+    color: #777;
   }
 
   &:hover {
@@ -31,14 +34,14 @@
   }
 
   &-nav {
-    &:first-of-type {
-      border-top: 1px solid rgba(0, 0, 0, 0.08);
-    }
     width: 100%;
     display: flex;
     list-style: none;
-    font-size: 1.5rem;
+    font-size: 2rem;
     flex-direction: column;
+    margin-bottom: 4rem;
+    width: 70%;
+    align-self: flex-end;
   }
 
   &-item {
@@ -50,23 +53,23 @@
     display: flex;
     align-items: center;
     padding: 1rem;
-    margin: 0.1rem;
+    margin: 0.5rem 0;
     color: var(--nav-text-color);
-    font-weight: var(--font-weight-md);
     min-width: 50%;
 
+    &--active,
     &:hover {
-      filter: brightness(1.5);
-      background-color: rgba(0, 0, 0, 0.05);
+      --nav-text-color: #ba0f22;
+      background-color: #eec3c8;
     }
   }
 
   &-icon svg {
-    --icon-size: 1.5rem;
+    --icon-size: 2.2rem;
     width: var(--icon-size);
     height: var(--icon-size);
     fill: var(--nav-text-color);
     display: block;
-    margin-right: 1rem;
+    margin-right: 1.3rem;
   }
 }
