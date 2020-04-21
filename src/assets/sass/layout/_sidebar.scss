@@ -57,9 +57,12 @@
     color: var(--nav-text-color);
     min-width: 50%;
     transition: all 0.2s;
+    border-radius: 3px;
+    outline: none;
 
     &--active,
-    &:hover {
+    &:hover,
+    &:focus {
       --nav-text-color: #ba0f22;
       background-color: #eec3c8;
     }
