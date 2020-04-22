@@ -1,0 +1,14 @@
+.login {
+  font-size: 1.6rem;
+  line-height: 1.6;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-form {
+  display: grid;
+  gap: 2rem;
+}

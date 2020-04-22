@@ -1,0 +1,7 @@
+.button {
+  @extend .input;
+
+  &--primary {
+    background-color: var(--color-primary);
+  }
+}

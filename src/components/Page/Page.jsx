@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 export const AuthContext = React.createContext();
 export const MusicPlayerContext = React.createContext();
@@ -9,7 +9,12 @@ export default function Page({ children }) {
   const [musicPlayerPlaying, setMusicPlayerPlaying] = useState(false);
 
   // TODO: Manage user login
-  // useEffect(() => {}, []);
+  useEffect(() => {
+    const storedUser = localStorage.getItem('user');
+    if (storedUser) {
+      setUser({ email: storedUser });
+    }
+  }, []);
 
   return (
     <AuthContext.Provider value={{ user, setUser }}>

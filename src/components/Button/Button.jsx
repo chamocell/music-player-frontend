@@ -1,7 +1,11 @@
 import React from 'react';
 
-function Button() {
-  return <button type="button">Button component</button>;
+function Button({ children, ...rest }) {
+  return (
+    <button {...rest} className="button">
+      {children}
+    </button>
+  );
 }
 
 export default Button;
