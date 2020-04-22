@@ -16,10 +16,10 @@ function App() {
         <Switch>
           <Route exact path="/login" component={Login} />
           <MainRoute exact path="/" component={Home} />
-          <MainRoute path="/albums" component={Home} />
-          <MainRoute exact path="/artists" component={Home} />
+          <MainRoute path="/albums" component={'' ? Message : Message} />
+          <MainRoute exact path="/artists" component={'' ? Message : Message} />
           <MainRoute path="/artists/:id" component={ArtistContainer} />
-          <MainRoute path="/favourites" component={Home} />
+          <MainRoute path="/favourites" component={'' ? Message : Message} />
           <Route>
             <Message height={400} children="NO ENCONTRADO" status="404" />
           </Route>
