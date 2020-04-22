@@ -29,3 +29,47 @@ h3.no_favoritos {
 span.MuiChip-label {
   padding: 0
 }
+
+// Search
+
+.search {
+  width: 100%;
+  position: relative;
+  display: flex;
+}
+
+.searchTerm {
+  width: 100%;
+  border: 2px solid #ededed;
+  border-right: none;
+  padding: 5px;
+  height: 40px;
+  border-radius: 0px 5px 5px 0px;
+  outline: none;
+  color: #9DBFAF;
+  background: #ededed;
+  font-size: 15px;
+}
+
+.searchTerm:focus{
+  color: #00B4CC;
+}
+
+.searchButton {
+  width: 40px;
+  height: 40px;
+  border: 1px solid #ededed;
+  background: #ededed;
+  text-align: center;
+  color: #000;
+  border-radius: 5px 0px 0px 5px;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+.iconSearch {
+  width: 18px;
+  margin-top: 5px;
+}
+
+/*Resize the wrap to see the search bar change!*/

@@ -5,10 +5,10 @@ import Grid from '@material-ui/core/Grid';
 
 // Components
 import CardLandscape from '../Cards/CardLandscape';
-import SlideContainer from '../SlideContainer';
 import CardSearch from '../Cards/CardSearch';
 import CardTalent from '../Cards/CardTalent';
 import Button from './../Button';
+import Search from '../Search/Search';
 
 // Requests
 import Artist from '../../requests/Artista/Artista';
@@ -22,7 +22,7 @@ function Home() {
     localStorage.removeItem('user');
   }
 
-  useEffect(() => {
+  const artists = useEffect(() => {
     Artist.get('?results=7').then((res) => {
       setArtista(res);
     });
@@ -33,6 +33,17 @@ function Home() {
       Welcome Back, {user.email}
       <Button onClick={handleClick}>Log out</Button>
       <CardTalent />
+      <h1 className="titulo_home">
+        Mis favoritos (
+        {artista && artista.data && artista.data.results.length >= 0
+          ? artista && artista.data && artista.data.results.length
+          : 0}
+        )
+      </h1>
+      <Grid container direction="row" justify="space-between" alignItems="flex-start">
+        <Search search={artists} />
+        <CardTalent image="https://avatars3.githubusercontent.com/u/15000248?s=460&u=2e1dc6e71e73a162aef210b9807890c30bc48c1f&v=4" />
+      </Grid>
       <h1 className="titulo_home">
         Mis favoritos (
         {artista && artista.data && artista.data.results.length >= 0

@@ -120,7 +120,7 @@ const CardArtist = ({
   const classes = useStyles({ width, height, bgSize, borderRadius, image });
 
   return (
-    <Grid container direction="row" justify="flex-start" alignItems="flex-start">
+    <Grid container direction="row" justify="flex-start" alignItems="flex-start" style={{marginTop: '20px'}}>
     
       <div
         className={`${classes.CardArtist} ${isFocusable ? 'focusable': ''}`}
