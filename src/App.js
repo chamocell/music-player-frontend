@@ -15,9 +15,9 @@ function App() {
         <Switch>
           <Route exact path="/login" component={Login} />
           <MainRoute exact path="/" component={Home} />
-          <MainRoute exact path="/albums" component={Home} />
-          <MainRoute exact path="/artists" component={Home} />
-          <MainRoute exact path="/favourites" component={Home} />
+          <MainRoute path="/albums" component={Home} />
+          <MainRoute path="/artists" component={Home} />
+          <MainRoute path="/favourites" component={Home} />
           <Route>
             <p>Not found</p>
           </Route>
