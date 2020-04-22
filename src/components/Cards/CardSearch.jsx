@@ -47,8 +47,8 @@ const useStyles = makeStyles(() => ({
 	cardSearch: ({ width, height, borderRadius }) => ({
 		background: theme.palette.grayColor.main,
 		border: `1px solid ${theme.palette.primary}`,
-		height: height || 225,
-		width: width || 290,
+		height: height || 230,
+		width: '280px',
 		margin: 10,
 		borderRadius: borderRadius || 6,
 		overflow: 'hidden',

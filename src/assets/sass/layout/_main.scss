@@ -3,6 +3,7 @@
   overflow-y: auto;
   font-size: 1.6rem;
   line-height: 1.6;
+  padding: 20px;
 }
 
 .home {
@@ -14,7 +15,6 @@ h1.titulo_home{
   margin-left: 15px;
   margin-bottom: 0px;
   font-weight: 400;
-  text-transform: capitalize;
   font-size: 26px;
 }
 
@@ -23,6 +23,9 @@ h3.no_favoritos {
   margin-left: 15px;
   margin-bottom: 0px;
   font-weight: 400;
-  text-transform: capitalize;
   font-size: 12px;
+}
+
+span.MuiChip-label {
+  padding: 0
 }

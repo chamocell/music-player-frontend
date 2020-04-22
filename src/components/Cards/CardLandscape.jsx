@@ -4,6 +4,7 @@ import Typography from "@material-ui/core/Typography";
 import Paper from "@material-ui/core/Paper";
 import Chip from "@material-ui/core/Chip";
 
+import { ReactComponent as StarIcon } from './../../assets/icons/star.svg';
 const defaultImage = require('./images/default-image.svg');
 
 const theme = {
@@ -106,12 +107,12 @@ const useStyles = makeStyles(() => ({
     background: "transparent"
   },
   chip: {
-    borderRadius: "12px",
+    borderRadius: "70px",
     fontSize: 16,
     textTransform: "lowercase",
     background: theme && theme.palette && theme.palette.primary && theme.palette.primary.main,
     height: "auto",
-    padding: 2,
+    padding: 8,
     margin: 5,
     boxShadow: "0 1px 4px 0 rgba(0,0,0,0.5)"
   },
@@ -155,7 +156,7 @@ const CardLandscape = ({
         onKeyUp={e => {}}
       >
         <Paper elevation={0} className={classes.paper}>
-          {novo && <Chip label="NOVO" className={classes.chip} />}
+        {novo && <Chip className={classes.chip} icon={<StarIcon style={{color: '#fff', margin: '0'}} />} />}
         </Paper>
         {children}
       </div>
