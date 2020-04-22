@@ -7,6 +7,7 @@ import { ReactComponent as MusicIcon } from './../../assets/icons/music.svg';
 import { MusicPlayerContext } from './../Page';
 
 import { NavLink } from 'react-router-dom';
+import Button from './../Button';
 
 import React, { useContext } from 'react';
 
@@ -37,7 +38,7 @@ function Sidebar({ title }) {
           Mis favoritas
         </SidebarItem>
       </SidebarItemList>
-      <button onClick={() => toggleMusicPlayer()}>Toggle Music Player</button>
+      <Button onClick={() => toggleMusicPlayer()}>Toggle Music Player</Button>
     </nav>
   );
 }
