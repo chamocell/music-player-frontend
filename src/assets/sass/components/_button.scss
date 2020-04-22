@@ -1,7 +1,12 @@
 .button {
   @extend .input;
+  cursor: pointer;
+  border: none;
 
   &--primary {
-    background-color: var(--color-primary);
+    // background-color: var(--color-primary);
+    color: #ffffff;
+    font-weight: var(--font-weight-bold);
+    background-color: #ba0f22;
   }
 }

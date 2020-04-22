@@ -4,11 +4,53 @@
   width: 100vw;
   height: 100vh;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-}
 
-.login-form {
-  display: grid;
-  gap: 2rem;
+  &-label {
+    margin-bottom: 0.8rem;
+    display: flex;
+    flex-direction: column;
+    font-weight: var(--font-weight-md);
+  }
+
+  &-logo {
+    width: 10rem;
+    border-radius: 50%;
+    margin-bottom: 3.5rem;
+  }
+
+  &-form {
+    display: grid;
+    grid-template-columns: minmax(min-content, 40rem);
+  }
+
+  &-input {
+    margin-bottom: 2.6rem;
+  }
+
+  &-button,
+  &-link {
+    font-size: 1.8rem;
+  }
+
+  &-button {
+    max-width: 19rem;
+    justify-self: center;
+    margin-top: 0.6rem;
+  }
+
+  &-link {
+    color: #ba0f22;
+    text-decoration: none;
+    font-weight: var(--font-weight-md);
+    justify-self: center;
+    margin-top: 2rem;
+  }
+
+  &-message {
+    margin: 2rem 0;
+    color: #ba0f22;
+  }
 }
