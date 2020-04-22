@@ -12,15 +12,15 @@
   padding: 5rem;
   align-items: center;
 
-  &-icon svg {
+  &-icon {
     fill: #fff;
     width: var(--icon-size);
     height: var(--icon-size);
     display: block;
-  }
 
-  &-icon--toggle-play svg {
-    width: calc(var(--icon-size) * 2);
-    height: calc(var(--icon-size) * 2);
+    &--toggle-play {
+      width: calc(var(--icon-size) * 2);
+      height: calc(var(--icon-size) * 2);
+    }
   }
 }
