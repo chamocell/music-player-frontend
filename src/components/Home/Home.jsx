@@ -30,20 +30,12 @@ function Home() {
 
   return (
     <div className="home">
-      Welcome Back, {user.email}
-      <Button onClick={handleClick}>Log out</Button>
-      <CardTalent />
-      <h1 className="titulo_home">
-        Mis favoritos (
-        {artista && artista.data && artista.data.results.length >= 0
-          ? artista && artista.data && artista.data.results.length
-          : 0}
-        )
-      </h1>
       <Grid container direction="row" justify="space-between" alignItems="flex-start">
         <Search search={artists} />
         <CardTalent image="https://avatars3.githubusercontent.com/u/15000248?s=460&u=2e1dc6e71e73a162aef210b9807890c30bc48c1f&v=4" />
       </Grid>
+      Welcome Back, {user.email}
+      <Button onClick={handleClick}>Log out</Button>
       <h1 className="titulo_home">
         Mis favoritos (
         {artista && artista.data && artista.data.results.length >= 0

@@ -17,7 +17,7 @@ function App() {
           <Route exact path="/login" component={Login} />
           <MainRoute exact path="/" component={Home} />
           <MainRoute path="/albums" component={Home} />
-          <MainRoute path="/artists" component={Home} />
+          <MainRoute exact path="/artists" component={Home} />
           <MainRoute path="/artists/:id" component={ArtistContainer} />
           <MainRoute path="/favourites" component={Home} />
           <Route>
