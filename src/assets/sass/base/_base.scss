@@ -6,24 +6,40 @@
   box-sizing: inherit;
 }
 
+:root {
+  --color-primary: #ffffff;
+  --color-primary-dark: #b81432;
+  --font-weight-md: 500;
+  --font-weight-bold: 600;
+  --border-radius: 3px;
+}
+
 html {
   font-size: 62.5%;
 }
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu',
-    'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto',
+    'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
-  font-size: 1.6rem;
-  line-height: 1.6;
   box-sizing: border-box;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: var(--font-weight-bold);
 }
 
 button,
@@ -32,4 +48,12 @@ textarea {
   font-family: inherit;
   font-size: inherit;
   line-height: inherit;
+}
+
+#root {
+  height: 100vh;
+  display: grid;
+  grid-template-rows: 1fr min-content;
+  // grid-template-columns: minmax(min-content, 26rem) minmax(min-content, 1fr);
+  grid-template-columns: minmax(min-content, 26rem) 1fr;
 }
