@@ -6,6 +6,8 @@ import Home from './components/Home';
 import Page from './components/Page';
 import Login from './components/Login';
 import MainRoute from './components/MainRoute';
+import ArtistContainer from './components/ArtistContainer';
+import Message from './components/Message';
 
 function App() {
   return (
@@ -16,9 +18,10 @@ function App() {
           <MainRoute exact path="/" component={Home} />
           <MainRoute path="/albums" component={Home} />
           <MainRoute path="/artists" component={Home} />
+          <MainRoute path="/artists/:id" component={ArtistContainer} />
           <MainRoute path="/favourites" component={Home} />
           <Route>
-            <p>Not found</p>
+            <Message height={400} children="NO ENCONTRADO" status="404" />
           </Route>
         </Switch>
       </Router>
