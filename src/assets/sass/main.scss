@@ -3,7 +3,9 @@
 @import 'layout/main';
 @import 'layout/sidebar';
 @import 'layout/music-player';
-@import 'layout/login';
+
+@import 'pages/login';
+@import 'pages/home';
 
 @import 'components/input';
 @import 'components/button';
