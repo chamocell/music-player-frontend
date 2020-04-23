@@ -1,1 +1,0 @@
-# MainRoute component documentation

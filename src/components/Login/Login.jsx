@@ -19,10 +19,10 @@ function Login({ location: { next } }) {
     localStorage.setItem('user', email);
   }
 
-  return user ? (
-    <Redirect to={next || '/'} />
-  ) : (
-    <main className="login">
+  if (user) return <Redirect to={next || '/'} />;
+
+  return (
+    <div className="login">
       <img className="login-logo" src={logo} alt="Fazt logo" />
       {errorMsg && <p className="login-message">{errorMsg}</p>}
       <form className="login-form" onSubmit={handleSubmit}>
@@ -61,7 +61,7 @@ function Login({ location: { next } }) {
           Registrate
         </Link>
       </form>
-    </main>
+    </div>
   );
 }
 

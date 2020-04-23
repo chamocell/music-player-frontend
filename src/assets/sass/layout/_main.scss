@@ -3,14 +3,9 @@
   overflow-y: auto;
   font-size: 1.6rem;
   line-height: 1.6;
-  padding: 20px;
 }
 
-.home {
-  overflow: hidden;
-}
-
-h1.titulo_home{
+h1.titulo_home {
   margin-top: 20px;
   margin-left: 15px;
   margin-bottom: 0px;
@@ -27,7 +22,7 @@ h3.no_favoritos {
 }
 
 span.MuiChip-label {
-  padding: 0
+  padding: 0;
 }
 
 // Search
@@ -46,13 +41,13 @@ span.MuiChip-label {
   height: 40px;
   border-radius: 0px 5px 5px 0px;
   outline: none;
-  color: #9DBFAF;
+  color: #9dbfaf;
   background: #ededed;
   font-size: 15px;
 }
 
-.searchTerm:focus{
-  color: #00B4CC;
+.searchTerm:focus {
+  color: #00b4cc;
 }
 
 .searchButton {
