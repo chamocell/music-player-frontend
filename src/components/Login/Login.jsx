@@ -54,7 +54,7 @@ function Login({ location: { next } }) {
             setErrorMsg('');
           }}
         />
-        <Button extraClasses="login-button" style="primary" type="submit">
+        <Button extraClasses="login-button" buttonStyle="primary" type="submit">
           Iniciar Sesión
         </Button>
         <Link className="login-link" to="/register">
