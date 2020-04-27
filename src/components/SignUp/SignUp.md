@@ -1,0 +1,1 @@
+# SignUp component documentation
