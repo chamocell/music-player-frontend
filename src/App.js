@@ -7,7 +7,7 @@ import Login from './components/Login';
 import PrivateRoute from './components/PrivateRoute';
 import ArtistContainer from './components/ArtistContainer';
 import Message from './components/Message';
-import SignUp from './components/SignUp/SignUp';
+import SignUp from './components/SignUp';
 
 import { Route } from 'react-router-dom';
 
