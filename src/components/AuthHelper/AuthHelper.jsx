@@ -77,7 +77,7 @@ export default function AuthHelper({ next, type, onSubmit }) {
           {type === 'signup' ? 'Registrarse' : 'Iniciar Sesión'}
         </Button>
 
-        <Link className="login-link" to={type}>
+        <Link className="login-link" to={'/' + type}>
           {type === 'signup' ? 'Iniciar sesión' : 'Registrate'}
         </Link>
       </form>
