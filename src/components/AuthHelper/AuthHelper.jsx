@@ -13,7 +13,7 @@ export default function AuthHelper({ next, type, onSubmit }) {
   const [errorMsg, setErrorMsg] = useState('');
 
   function defaultSubmitHandler() {
-    if (!email || !password || (type === 'register' && !username))
+    if (!email || !password || (type === 'signup' && !username))
       return setErrorMsg('Debes llenar todos los campos!');
     setUser({ email });
     localStorage.setItem('user', email);
@@ -36,7 +36,7 @@ export default function AuthHelper({ next, type, onSubmit }) {
       <img className="login-logo" src={logo} alt="Fazt logo" />
       {errorMsg && <p className="login-message">{errorMsg}</p>}
       <form className="login-form" onSubmit={handleSubmit}>
-        {type === 'register' && (
+        {type === 'signup' && (
           <>
             <label htmlFor="login-username" className="login-label">
               Nombre de usuario
@@ -74,11 +74,11 @@ export default function AuthHelper({ next, type, onSubmit }) {
         />
 
         <Button extraClasses="login-button" buttonStyle="primary" type="submit">
-          {type === 'register' ? 'Registrarse' : 'Iniciar Sesión'}
+          {type === 'signup' ? 'Registrarse' : 'Iniciar Sesión'}
         </Button>
 
-        <Link className="login-link" to={type === 'register' ? '/login' : '/register'}>
-          {type === 'register' ? 'Iniciar sesión' : 'Registrate'}
+        <Link className="login-link" to={type}>
+          {type === 'signup' ? 'Iniciar sesión' : 'Registrate'}
         </Link>
       </form>
     </div>

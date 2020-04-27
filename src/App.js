@@ -15,7 +15,7 @@ function App() {
   return (
     <Page>
       <Route exact path="/login" component={Login} />
-      <Route exact path="/register" component={SignUp} />
+      <Route exact path="/signup" component={SignUp} />
       <PrivateRoute exact path="/" component={Home} />
       {/* <PrivateRoute path="/albums" component={Home} /> */}
       {/* <PrivateRoute exact path="/artists" component={Home} /> */}
