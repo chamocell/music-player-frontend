@@ -4,7 +4,8 @@
 
 .music-player {
   --icon-size: 1.8rem;
-  background-color: var(--color-primary-dark);
+  box-shadow: 0 0 10rem rgba(#000, 0.2);
+  background-color: var(--bgcolor-music-player);
   display: grid;
   grid-template-columns: repeat(5, auto);
   justify-content: center;
@@ -13,7 +14,7 @@
   align-items: center;
 
   &-icon {
-    fill: #fff;
+    fill: var(--color-text);
     width: var(--icon-size);
     height: var(--icon-size);
     display: block;
