@@ -2,18 +2,14 @@ import React, { useContext } from 'react';
 import { AuthContext } from './../Page';
 import { Route, Redirect } from 'react-router-dom';
 
-function Children({ children }) {
-  return <>{children}</>;
-}
-
-export default function PrivateRoute({ children, ...rest }) {
+export default function PrivateRoute({ component: Component, ...rest }) {
   const { user } = useContext(AuthContext);
   return (
     <Route
       {...rest}
       render={(routeProps) =>
         user ? (
-          <Children children={children} {...routeProps} />
+          <Component {...routeProps} />
         ) : (
           <Redirect
             to={{

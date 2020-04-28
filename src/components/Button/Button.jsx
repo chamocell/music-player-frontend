@@ -1,8 +1,8 @@
 import React from 'react';
 
-function Button({ children, style, extraClasses, ...rest }) {
+function Button({ children, buttonStyle, extraClasses, ...rest }) {
   return (
-    <button {...rest} className={`button button--${style} ${extraClasses}`}>
+    <button {...rest} className={`button button--${buttonStyle} ${extraClasses}`}>
       {children}
     </button>
   );

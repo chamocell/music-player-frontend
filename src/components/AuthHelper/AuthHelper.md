@@ -1,0 +1,1 @@
+# AuthHelper component documentation
