@@ -7,9 +7,16 @@
 }
 
 :root {
-  --color-primary: #ffffff;
-  --color-primary-dark: #b81432;
-  --color-gray: rgb(207, 207, 207);
+  --color-text: #222;
+  --color-text-light: #fff;
+
+  --color-gray: #cfcfcf;
+  --color-gray-2: #777;
+  --color-primary: #ba0f22;
+  --color-primary-bg: #eec3c8;
+
+  --bgcolor-sidebar: #fff;
+  --bgcolor-music-player: #fff;
 
   --font-weight-md: 500;
   --font-weight-bold: 600;

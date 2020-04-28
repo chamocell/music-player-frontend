@@ -7,6 +7,7 @@ import Login from './components/Login';
 import PrivateRoute from './components/PrivateRoute';
 import ArtistContainer from './components/ArtistContainer';
 import Message from './components/Message';
+import SignUp from './components/SignUp';
 
 import { Route } from 'react-router-dom';
 
@@ -14,6 +15,7 @@ function App() {
   return (
     <Page>
       <Route exact path="/login" component={Login} />
+      <Route exact path="/signup" component={SignUp} />
       <PrivateRoute exact path="/" component={Home} />
       {/* <PrivateRoute path="/albums" component={Home} /> */}
       {/* <PrivateRoute exact path="/artists" component={Home} /> */}
