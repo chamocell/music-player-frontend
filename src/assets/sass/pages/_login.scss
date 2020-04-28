@@ -42,7 +42,7 @@
   }
 
   &-link {
-    color: #ba0f22;
+    color: var(--color-primary);
     text-decoration: none;
     font-weight: var(--font-weight-md);
     justify-self: center;
@@ -51,6 +51,6 @@
 
   &-message {
     margin: 2rem 0;
-    color: #ba0f22;
+    color: var(--color-primary);
   }
 }

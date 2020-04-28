@@ -4,9 +4,8 @@
   border: none;
 
   &--primary {
-    // background-color: var(--color-primary);
-    color: #ffffff;
+    color: var(--color-text-light);
     font-weight: var(--font-weight-bold);
-    background-color: #ba0f22;
+    background-color: var(--color-primary);
   }
 }
