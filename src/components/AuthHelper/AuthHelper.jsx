@@ -1,5 +1,5 @@
 import React, { useContext, useState } from 'react';
-import { AuthContext } from './../Page';
+import { AuthContext } from './../../containers/Page';
 import { Redirect } from 'react-router-dom';
 import Button from './../Button';
 import logo from './../../assets/img/fazt.png';

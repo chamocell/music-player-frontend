@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import MusicPlayer from './../MusicPlayer';
+import MusicPlayer from '../../components/MusicPlayer';
 import Main from './../Main';
-import Sidebar from './../Sidebar';
+import Sidebar from '../../components/Sidebar';
 
 import { BrowserRouter as Router, Switch } from 'react-router-dom';
 
