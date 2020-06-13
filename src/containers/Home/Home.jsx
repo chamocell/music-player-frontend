@@ -1,14 +1,14 @@
 import React, { useContext, useState, useEffect } from 'react';
-import { AuthContext } from './../Page';
+import { AuthContext } from '../../containers/Page';
 import { Link } from 'react-router-dom';
 import Grid from '@material-ui/core/Grid';
 
 // Components
-import CardLandscape from '../Cards/CardLandscape';
-import CardSearch from '../Cards/CardSearch';
-import CardTalent from '../Cards/CardTalent';
-import Button from './../Button';
-import Search from '../Search/Search';
+import CardLandscape from '../../components/Cards/CardLandscape';
+import CardSearch from '../../components/Cards/CardSearch';
+import CardTalent from '../../components/Cards/CardTalent';
+import Button from '../../components/Button';
+import Search from '../../components/Search/Search';
 
 // Requests
 import Artist from '../../requests/Artista/Artista';

@@ -4,7 +4,7 @@ import { ReactComponent as PictureIcon } from './../../assets/icons/image.svg';
 import { ReactComponent as UserIcon } from './../../assets/icons/user.svg';
 import { ReactComponent as MusicIcon } from './../../assets/icons/music.svg';
 
-import { MusicPlayerContext } from './../Page';
+import { MusicPlayerContext } from '../../containers/Page';
 
 import { NavLink } from 'react-router-dom';
 import Button from './../Button';

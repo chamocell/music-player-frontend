@@ -1,8 +1,8 @@
 import React from 'react';
 
 // Components
-import Home from './components/Home';
-import Page from './components/Page';
+import Home from './containers/Home';
+import Page from './containers/Page';
 import Login from './components/Login';
 import PrivateRoute from './components/PrivateRoute';
 import ArtistContainer from './containers/ArtistContainer';
