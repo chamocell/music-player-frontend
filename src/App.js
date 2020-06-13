@@ -5,7 +5,7 @@ import Home from './components/Home';
 import Page from './components/Page';
 import Login from './components/Login';
 import PrivateRoute from './components/PrivateRoute';
-import ArtistContainer from './components/ArtistContainer';
+import ArtistContainer from './containers/ArtistContainer';
 import Message from './components/Message';
 import SignUp from './components/SignUp';
 
