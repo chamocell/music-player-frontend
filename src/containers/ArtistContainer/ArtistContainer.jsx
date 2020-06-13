@@ -4,10 +4,10 @@ import { useRouteMatch } from 'react-router-dom';
 // Components
 import Grid from '@material-ui/core/Grid';
 import SlideContainer from '../SlideContainer';
-import CardSearch from '../Cards/CardSearch';
-import CardArtist from '../Cards/CardArtist';
-import CardTalent from '../Cards/CardTalent';
-import Search from '../Search/Search';
+import CardSearch from '../../components/Cards/CardSearch';
+import CardArtist from '../../components/Cards/CardArtist';
+import CardTalent from '../../components/Cards/CardTalent';
+import Search from '../../components/Search/Search';
 
 // Requests
 import Artist from '../../requests/Artista/Artista';

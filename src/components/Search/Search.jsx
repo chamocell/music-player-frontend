@@ -20,7 +20,7 @@ const Search = ({ search }) => {
     };
 
     return (
-        <div class="wrap">
+        <div className="wrap">
             <div className="search">
                 <button type="submit" className="searchButton">
                     <SearchIcon className='iconSearch' />

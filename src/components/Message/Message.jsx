@@ -13,10 +13,10 @@ const Message = ({ classes, children, height, status}) => {
             <img src={image} alt="popcorn icon" className={classes.image} />
             <p style={{ display: 'flex', flexDirection: 'column' }}>
                 <strong style={{ fontSize: 30 }}>
-                 {status}
+                 {status ? status : '404'}
                 </strong>
                 <span style={{ color: "#a5aab1", fontSize: 23, marginTop: 5, fontWeight: 300 }}>
-                {children}
+                {children ? children : 'No encontrado'}
                 </span>
             </p>
         </Grid>
