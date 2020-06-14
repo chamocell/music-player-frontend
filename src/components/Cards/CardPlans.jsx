@@ -3,48 +3,7 @@ import { makeStyles } from '@material-ui/core/styles'
 import Typography from '@material-ui/core/Typography'
 
 
-const theme = {
-	palette: {
-		primary: {
-			//light: '#757ce8',
-			main: '#47536b',
-			//dark: '#002884',
-			//contrastText: '#fff',
-		},
-		secondary: {
-			//light: '#ff7961',
-			main: '#e1251b',
-			//dark: '#ba000d',
-			//contrastText: '#000',
-		},
-		grayColor: {
-			main: '#212224'
-		},
-		fontColorPrimary: {
-			main: '#99CBFF'
-		},
-		colorActive: {
-			main: '#47536b'
-		}
-	},
-	shadowBox: {
-		generic: '0 3px 5px 2px rgba(0, 0, 0, .4)'
-	},
-	typography: {
-		//fontFamily: ['Roboto'].join(','),
-		subtitle1: {
-			fontSize: 12,
-		},
-		body1: {
-			fontWeight: 500,
-		},
-		button: {
-			fontStyle: 'italic',
-		},
-	},
-};
-
-const useStyles = makeStyles(() => ({
+const useStyles = makeStyles((theme) => ({
 	plans: ({ width, height, bgSize, borderRadius, image }) => ({
 		backgroundImage: `url(${image || 'http://clarovideocdn5.clarovideo.net/pregeneracion//cms/images/202001/75478_Default_Passangers-now_16154434.jpg'})`,
 		position: 'relative',
