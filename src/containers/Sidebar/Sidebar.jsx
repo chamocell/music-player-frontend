@@ -1,4 +1,5 @@
-// import { ReactComponent as SignalIcon } from './../../assets/icons/signal.svg';
+import React, { useContext } from 'react';
+
 import { ReactComponent as HomeIcon } from './../../assets/icons/home.svg';
 import { ReactComponent as PictureIcon } from './../../assets/icons/image.svg';
 import { ReactComponent as UserIcon } from './../../assets/icons/user.svg';
@@ -6,10 +7,9 @@ import { ReactComponent as MusicIcon } from './../../assets/icons/music.svg';
 
 import { MusicPlayerContext } from '../../containers/Page';
 
-import { NavLink } from 'react-router-dom';
-import Button from './../Button';
-
-import React, { useContext } from 'react';
+import Button from '../../components/Button';
+import SidebarItem from '../../components/SidebarItem/SidebarItem';
+import SidebarItemList from '../../components/SidebarItemList/SidebarItemList';
 
 function Sidebar({ title }) {
   const { active, setActive } = useContext(MusicPlayerContext);
@@ -40,31 +40,6 @@ function Sidebar({ title }) {
       </SidebarItemList>
       <Button onClick={() => toggleMusicPlayer()}>Toggle Music Player</Button>
     </nav>
-  );
-}
-
-function SidebarItemList({ heading, children }) {
-  return (
-    <ul className="sidebar-nav">
-      <h3 className="sidebar-heading">{heading}</h3>
-      {children}
-    </ul>
-  );
-}
-
-function SidebarItem({ href, icon: Icon, children, ...rest }) {
-  return (
-    <li className="sidebar-item">
-      <NavLink
-        {...rest}
-        activeClassName="sidebar-link--active"
-        className="sidebar-link"
-        to={href}
-      >
-        <Icon className="sidebar-icon" />
-        {children}
-      </NavLink>
-    </li>
   );
 }
 

@@ -37,7 +37,11 @@ function Home() {
       Welcome Back, {user.email}
       <Button onClick={handleClick}>Log out</Button>
       <h1 className="titulo_home">
-        Mis favoritos ({artista?.data?.results?.length || 0})
+        Mis favoritos (
+        {artista && artista.data && artista.data.results.length >= 0
+          ? artista && artista.data && artista.data.results.length
+          : 0}
+        )
       </h1>
       <Grid container direction="row" justify="flex-start" alignItems="flex-start">
         <CardLandscape
@@ -75,21 +79,23 @@ function Home() {
         wrap="nowrap"
         style={{ overflowX: 'auto' }}
       >
-        {artista?.data?.results?.map((e, index) => (
-          <Link
-            to={`/artists/${e.id.value}`}
-            key={index}
-            style={{ textDecoration: 'none' }}
-          >
-            <CardTalent
-              width={150}
-              height={150}
-              title={e.name.first}
-              image={e.picture.large}
-              infoTalent="Artista"
-            />
-          </Link>
-        ))}
+        {artista &&
+          artista.data &&
+          artista.data.results.map((e, index) => (
+            <Link
+              to={`/artists/${e.id.value}`}
+              key={index}
+              style={{ textDecoration: 'none' }}
+            >
+              <CardTalent
+                width={150}
+                height={150}
+                title={e.name.first}
+                image={e.picture.large}
+                infoTalent="Artista"
+              />
+            </Link>
+          ))}
       </Grid>
     </div>
   );

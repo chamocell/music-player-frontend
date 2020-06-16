@@ -1,15 +1,14 @@
 import React from 'react';
+import { Route } from 'react-router-dom';
 
-// Components
+import Login from './containers/Login';
+import SignUp from './containers/SignUp';
 import Home from './containers/Home';
 import Page from './containers/Page';
-import Login from './components/Login';
-import PrivateRoute from './components/PrivateRoute';
 import ArtistContainer from './containers/ArtistContainer';
-import Message from './components/Message';
-import SignUp from './components/SignUp';
 
-import { Route } from 'react-router-dom';
+import PrivateRoute from './components/PrivateRoute';
+import Message from './components/Message';
 
 function App() {
   return (
