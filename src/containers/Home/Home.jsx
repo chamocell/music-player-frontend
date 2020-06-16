@@ -2,6 +2,8 @@ import React, { useContext, useState, useEffect } from 'react';
 import { AuthContext } from '../../containers/Page';
 import { Link } from 'react-router-dom';
 import Grid from '@material-ui/core/Grid';
+import SimpleBarReact from 'simplebar-react';
+import 'simplebar/src/simplebar.css';
 
 // Components
 import CardLandscape from '../../components/Cards/CardLandscape';
@@ -55,48 +57,76 @@ function Home() {
       </Grid>
       <br></br>
       <h1 className="titulo_home">Álbumes más recientes</h1>
-      <Grid container direction="row" justify="flex-start" alignItems="flex-start">
-        <CardSearch title="Mutter" subTitle="Rammstein" />
-        <CardSearch title="Mutter" subTitle="Rammstein" />
-        <CardSearch title="Mutter" subTitle="Rammstein" />
-        <CardSearch title="Mutter" subTitle="Rammstein" />
-      </Grid>
+      <SimpleBarReact
+        direction="rtl"
+        autoHide={false}
+        scrollbarMaxSize="40"
+        scrollbarMinSize="20"
+      >
+        <Grid className="albumsRecents">
+          <CardSearch title="Mutter" subTitle="Rammstein" />
+          <CardSearch title="Mutter" subTitle="Rammstein" />
+          <CardSearch title="Mutter" subTitle="Rammstein" />
+          <CardSearch title="Mutter" subTitle="Rammstein" />
+          <CardSearch title="Mutter" subTitle="Rammstein" />
+          <CardSearch title="Mutter" subTitle="Rammstein" />
+          <CardSearch title="Mutter" subTitle="Rammstein" />
+          <CardSearch title="Mutter" subTitle="Rammstein" />
+        </Grid>
+      </SimpleBarReact>
       <br></br>
       <h1 className="titulo_home">Sencillos más recientes</h1>
-      <Grid container direction="row" justify="flex-start" alignItems="flex-start">
-        <CardSearch title="uno" subTitle="sub título" />
-        <CardSearch title="Mutter" subTitle="Rammstein" />
-        <CardSearch title="Mutter" subTitle="Rammstein" />
-        <CardSearch title="Mutter" subTitle="Rammstein" />
-      </Grid>
+      <SimpleBarReact
+        direction="rtl"
+        autoHide={false}
+        scrollbarMaxSize="40"
+        scrollbarMinSize="20"
+      >
+        <Grid className="albumsRecents">
+          <CardSearch title="Mutter" subTitle="Rammstein" />
+          <CardSearch title="Mutter" subTitle="Rammstein" />
+          <CardSearch title="Mutter" subTitle="Rammstein" />
+          <CardSearch title="Mutter" subTitle="Rammstein" />
+          <CardSearch title="Mutter" subTitle="Rammstein" />
+          <CardSearch title="Mutter" subTitle="Rammstein" />
+          <CardSearch title="Mutter" subTitle="Rammstein" />
+          <CardSearch title="Mutter" subTitle="Rammstein" />
+        </Grid>
+      </SimpleBarReact>
       <br></br>
       <h1 className="titulo_home">Artistas destacados</h1>
-      <Grid
-        container
-        direction="row"
-        justify="flex-start"
-        alignItems="flex-start"
-        wrap="nowrap"
-        style={{ overflowX: 'auto' }}
+      <SimpleBarReact
+        direction="rtl"
+        autoHide={false}
+        scrollbarMaxSize="40"
+        scrollbarMinSize="20"
       >
-        {artista &&
-          artista.data &&
-          artista.data.results.map((e, index) => (
-            <Link
-              to={`/artists/${e.id.value}`}
-              key={index}
-              style={{ textDecoration: 'none' }}
-            >
-              <CardTalent
-                width={150}
-                height={150}
-                title={e.name.first}
-                image={e.picture.large}
-                infoTalent="Artista"
-              />
-            </Link>
-          ))}
-      </Grid>
+        <Grid
+          container
+          direction="row"
+          justify="flex-start"
+          alignItems="flex-start"
+          wrap="nowrap"
+        >
+          {artista &&
+            artista.data &&
+            artista.data.results.map((e, index) => (
+              <Link
+                to={`/artists/${e.id.value}`}
+                key={index}
+                style={{ textDecoration: 'none' }}
+              >
+                <CardTalent
+                  width={150}
+                  height={150}
+                  title={e.name.first}
+                  image={e.picture.large}
+                  infoTalent="Artista"
+                />
+              </Link>
+            ))}
+        </Grid>
+      </SimpleBarReact>
     </div>
   );
 }
