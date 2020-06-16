@@ -32,6 +32,11 @@
     },
     {
       "name": "zd4y"
+    },
+    {
+      "name": "Freud Alexandro Múnera",
+      "email": "alexandromunera@gmail.com",
+      "url": "https://www.linkedin.com/in/freud-alexandro/"
     }
   ],
   "license": "UNLISENCED",
@@ -57,7 +62,7 @@
     "slick-carousel": "^1.8.1"
   },
   "devDependencies": {
-    "prettier": "^2.0.4"
+    "prettier": "^2.0.5"
   },
   "browserslist": {
     "production": [

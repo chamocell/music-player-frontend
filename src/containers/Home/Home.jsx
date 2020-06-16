@@ -71,7 +71,14 @@ function Home() {
       </Grid>
       <br></br>
       <h1 className="titulo_home">Artistas destacados</h1>
-      <Grid container direction="row" justify="flex-start" alignItems="flex-start">
+      <Grid
+        container
+        direction="row"
+        justify="flex-start"
+        alignItems="flex-start"
+        wrap="nowrap"
+        style={{ overflowX: 'auto' }}
+      >
         {artista &&
           artista.data &&
           artista.data.results.map((e, index) => (
