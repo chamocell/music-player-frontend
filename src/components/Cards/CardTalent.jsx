@@ -1,48 +1,48 @@
-import React from "react";
-import { makeStyles } from "@material-ui/core/styles";
-import Typography from "@material-ui/core/Typography";
+import React from 'react';
+import { makeStyles } from '@material-ui/core/styles';
+import Typography from '@material-ui/core/Typography';
 
-const imageDefault = require("./images/placeholder-actor.png")
+const imageDefault = require('./images/placeholder-actor.png');
 
 const theme = {
   palette: {
-      primary: {
-          //light: '#757ce8',
-          main: '#47536b',
-          //dark: '#002884',
-          //contrastText: '#fff',
-      },
-      secondary: {
-          //light: '#ff7961',
-          main: '#e1251b',
-          //dark: '#ba000d',
-          //contrastText: '#000',
-      },
-      grayColor: {
-          main: '#212224'
-      },
-      fontColorPrimary: {
-          main: '#99CBFF'
-      },
-      colorActive: {
-          main: '#47536b'
-      }
+    primary: {
+      //light: '#757ce8',
+      main: '#47536b'
+      //dark: '#002884',
+      //contrastText: '#fff',
+    },
+    secondary: {
+      //light: '#ff7961',
+      main: '#e1251b'
+      //dark: '#ba000d',
+      //contrastText: '#000',
+    },
+    grayColor: {
+      main: '#212224'
+    },
+    fontColorPrimary: {
+      main: '#99CBFF'
+    },
+    colorActive: {
+      main: '#47536b'
+    }
   },
   shadowBox: {
-      generic: '0 3px 5px 2px rgba(0, 0, 0, .4)'
+    generic: '0 3px 5px 2px rgba(0, 0, 0, .4)'
   },
   typography: {
-      //fontFamily: ['Roboto'].join(','),
-      subtitle1: {
-          fontSize: 12,
-      },
-      body1: {
-          fontWeight: 500,
-      },
-      button: {
-          fontStyle: 'italic',
-      },
-  },
+    //fontFamily: ['Roboto'].join(','),
+    subtitle1: {
+      fontSize: 12
+    },
+    body1: {
+      fontWeight: 500
+    },
+    button: {
+      fontStyle: 'italic'
+    }
+  }
 };
 
 const useStyles = makeStyles(() => ({
@@ -50,32 +50,38 @@ const useStyles = makeStyles(() => ({
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'center',
-    alignItems: 'flex-start',
+    alignItems: 'flex-start'
     //padding: '20px'
   },
   cardTalent: ({ width, height, bgSize, borderRadius, image }) => ({
     backgroundImage: `url(${image ? image : imageDefault})`,
-    position: "relative",
+    position: 'relative',
     margin: height * 0.06,
     backgroundSize: bgSize || 'cover',
-    backgroundPosition: "center",
-    border: `1px solid ${theme && theme.palette && theme.palette.primary && theme.palette.primary.main}`,
-    borderRadius: borderRadius || "50%",
+    backgroundPosition: 'center',
+    border: `1px solid ${
+      theme && theme.palette && theme.palette.primary && theme.palette.primary.main
+    }`,
+    borderRadius: borderRadius || '50%',
     height: height || 50,
     width: width || 50,
 
-    "&:hover": {
+    '&:hover': {
       width: width + width * 0.06,
       height: height + height * 0.06,
       backgroundSize: bgSize + bgSize * 0.13,
-      border: `3px solid ${theme && theme.palette && theme.palette.primary && theme.palette.primary.main}`,
+      border: `3px solid ${
+        theme && theme.palette && theme.palette.primary && theme.palette.primary.main
+      }`,
       margin: 0
     },
-    "&:focus": {
+    '&:focus': {
       width: width + width * 0.13,
       height: height + height * 0.13,
       backgroundSize: bgSize + bgSize * 0.13,
-      border: `3px solid ${theme && theme.palette && theme.palette.primary && theme.palette.primary.main}`,
+      border: `3px solid ${
+        theme && theme.palette && theme.palette.primary && theme.palette.primary.main
+      }`,
       margin: 0
     }
   }),
@@ -83,16 +89,16 @@ const useStyles = makeStyles(() => ({
     textAlign: 'center'
   },
   typographyTitle: ({ width }) => ({
-    color: "black",
+    color: 'black',
     //marginTop: 5,
     fontSize: 15,
-    textAlign: "center",
+    textAlign: 'center',
     width: width
   }),
   typographyRol: ({ width }) => ({
-    color: "black",
+    color: 'black',
     fontSize: 12,
-    textAlign: "center",
+    textAlign: 'center',
     width: width
   })
 }));
@@ -118,13 +124,13 @@ const CardTalent = ({
   return (
     <div className={classes.containerCardTalent}>
       <div
-        className={`${classes.cardTalent} ${isFocusable ? 'focusable': ''}`}
+        className={`${classes.cardTalent} ${isFocusable ? 'focusable' : ''}`}
         tabIndex="0"
-        onClick={e => {}}
+        onClick={(e) => {}}
         data-sn-right={`#i .focusable`}
         data-sn-left={`#i .focusable`}
-        onFocus={e => {}}
-        onKeyUp={e => {}}
+        onFocus={(e) => {}}
+        onKeyUp={(e) => {}}
       >
         {children}
       </div>
