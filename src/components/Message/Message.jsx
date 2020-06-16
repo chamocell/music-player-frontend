@@ -29,12 +29,12 @@ const useStyles = makeStyles((theme) => ({
     marginTop: 5,
     fontWeight: 300
   },
-  row: { 
-    display: 'flex', 
-    flexDirection: 'column' 
+  row: {
+    display: 'flex',
+    flexDirection: 'column'
   },
-  notFound: { 
-    fontSize: 30 
+  notFound: {
+    fontSize: 30
   }
 }));
 
