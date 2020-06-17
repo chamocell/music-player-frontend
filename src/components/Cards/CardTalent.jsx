@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
-import { Menu, MenuItem } from '@material-ui/core';
 
 const imageDefault = require('./images/placeholder-actor.png');
 
@@ -82,49 +81,29 @@ const CardTalent = ({
 }) => {
   const classes = useStyles({ width, height, bgSize, borderRadius, image });
 
-  const [anchorEl, setAnchorEl] = useState(null);
-
-  const handleClick = (event) => {
-    setAnchorEl(event.currentTarget);
-  };
-
-  const handleClose = () => {
-    setAnchorEl(null);
-  };
-
   return (
     <div className={classes.containerCardTalent}>
       <div
         className={`${classes.cardTalent} ${isFocusable ? 'focusable' : ''}`}
         tabIndex="0"
-        onClick={handleClick}
+        onClick={clickHandler}
         data-sn-right={`#i .focusable`}
         data-sn-left={`#i .focusable`}
         onFocus={(e) => {}}
         onKeyUp={(e) => {}}
       >
+        <div className={classes.infoCard}>
+          <Typography className={classes.typographyTitle} variant="body1">
+            {title}
+          </Typography>
+          {true && infoTalent && (
+            <Typography className={classes.typographyRol} variant="body2" noWrap>
+              {infoTalent}
+            </Typography>
+          )}
+        </div>
         {children}
       </div>
-      {/* <div className={classes.infoCard}>
-        <Typography className={classes.typographyTitle} variant="body1">
-          {title}
-        </Typography>
-        {true && infoTalent && (
-          <Typography className={classes.typographyRol} variant="body2" noWrap>
-            {infoTalent}
-          </Typography>
-        )}
-      </div> */}
-      <Menu
-        anchorEl={anchorEl}
-        keepMounted
-        onClose={handleClose}
-        open={Boolean(anchorEl)}
-      >
-        <MenuItem onClick={handleClose}>Perfil</MenuItem>
-        <MenuItem onClick={handleClose}>Mi Cuenta</MenuItem>
-        <MenuItem onClick={handleClose}>Salir</MenuItem>
-      </Menu>
     </div>
   );
 };
