@@ -1,15 +1,16 @@
 import React, { useContext, useState, useEffect } from 'react';
-import { AuthContext } from '../../containers/Page';
 import { Link } from 'react-router-dom';
 import Grid from '@material-ui/core/Grid';
+import { Menu, MenuItem } from '@material-ui/core';
+
 import SimpleBarReact from 'simplebar-react';
 import 'simplebar/src/simplebar.css';
 
-// Components
+import { AuthContext } from '../../containers/Page';
+
 import CardLandscape from '../../components/Cards/CardLandscape';
 import CardSearch from '../../components/Cards/CardSearch';
 import CardTalent from '../../components/Cards/CardTalent';
-import Button from '../../components/Button';
 import Search from '../../components/Search/Search';
 
 // Requests
@@ -18,11 +19,20 @@ import Artist from '../../requests/Artista/Artista';
 function Home() {
   const { user, setUser } = useContext(AuthContext);
   const [artista, setArtista] = useState([]);
+  const [anchorEl, setAnchorEl] = useState(null);
 
   function handleClick() {
     setUser();
     localStorage.removeItem('user');
   }
+
+  const avatarClick = (event) => {
+    setAnchorEl(event.currentTarget);
+  };
+
+  const handleClose = () => {
+    setAnchorEl(null);
+  };
 
   const artists = useEffect(() => {
     Artist.get('?results=7').then((res) => {
@@ -34,10 +44,19 @@ function Home() {
     <div className="home">
       <Grid container direction="row" justify="space-between" alignItems="flex-start">
         <Search search={artists} />
-        <CardTalent image="https://avatars3.githubusercontent.com/u/15000248?s=460&u=2e1dc6e71e73a162aef210b9807890c30bc48c1f&v=4" />
+        Welcome Back, {user.email}
+        <CardTalent clickHandler={avatarClick} image="https://avatars3.githubusercontent.com/u/15000248?s=460&u=2e1dc6e71e73a162aef210b9807890c30bc48c1f&v=4" />
+        <Menu
+          anchorEl={anchorEl}
+          keepMounted
+          onClose={handleClose}
+          open={Boolean(anchorEl)}
+        >
+          <MenuItem onClick={handleClose}>Perfil</MenuItem>
+          <MenuItem onClick={handleClose}>Mi Cuenta</MenuItem>
+          <MenuItem onClick={handleClose && handleClick}>Salir</MenuItem>
+        </Menu>
       </Grid>
-      Welcome Back, {user.email}
-      <Button onClick={handleClick}>Log out</Button>
       <h1 className="titulo_home">
         Mis favoritos (
         {artista && artista.data && artista.data.results.length >= 0
@@ -119,9 +138,9 @@ function Home() {
                 <CardTalent
                   width={150}
                   height={150}
-                  title={e.name.first}
+                  //title={e.name.first}
                   image={e.picture.large}
-                  infoTalent="Artista"
+                  //infoTalent="Artista"
                 />
               </Link>
             ))}

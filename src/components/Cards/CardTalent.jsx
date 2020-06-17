@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
 
@@ -41,7 +41,8 @@ const useStyles = makeStyles((theme) => ({
       border: `3px solid ${
         theme && theme.palette && theme.palette.primary && theme.palette.primary.main
       }`,
-      margin: 0
+      margin: 0,
+      outline: 'none'
     }
   }),
   infoCard: {
@@ -85,23 +86,23 @@ const CardTalent = ({
       <div
         className={`${classes.cardTalent} ${isFocusable ? 'focusable' : ''}`}
         tabIndex="0"
-        onClick={(e) => {}}
+        onClick={clickHandler}
         data-sn-right={`#i .focusable`}
         data-sn-left={`#i .focusable`}
         onFocus={(e) => {}}
         onKeyUp={(e) => {}}
       >
-        {children}
-      </div>
-      <div className={classes.infoCard}>
-        <Typography className={classes.typographyTitle} variant="body1">
-          {title}
-        </Typography>
-        {true && infoTalent && (
-          <Typography className={classes.typographyRol} variant="body2" noWrap>
-            {infoTalent}
+        <div className={classes.infoCard}>
+          <Typography className={classes.typographyTitle} variant="body1">
+            {title}
           </Typography>
-        )}
+          {true && infoTalent && (
+            <Typography className={classes.typographyRol} variant="body2" noWrap>
+              {infoTalent}
+            </Typography>
+          )}
+        </div>
+        {children}
       </div>
     </div>
   );
