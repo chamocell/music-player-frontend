@@ -20,7 +20,7 @@ const useStyles = makeStyles((theme) => ({
     backgroundSize: bgSize || 'cover',
     width: '100%',
     height: 160,
-    boxShadow: theme && theme.shadowBox && theme.shadowBox.generic,
+    boxShadow: theme?.shadowBox?.generic,
     display: 'flex',
     justifyContent: 'flex-start',
     alignItems: 'flex-start'
