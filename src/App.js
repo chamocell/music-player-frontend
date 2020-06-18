@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Route } from 'react-router-dom';
 import Login from './containers/Login';
 import SignUp from './containers/SignUp';
 import Home from './containers/Home';
-import Page from './containers/Page';
+import MusicApp from './containers/Page';
 import ArtistContainer from './containers/ArtistContainer';
 
 import Message from './components/Message';
@@ -14,7 +14,7 @@ function App() {
   return (
     <AuthProvider>
       <Router>
-        <Page>
+        <MusicApp>
           <Route exact path="/login" component={Login} />
           <Route exact path="/signup" component={SignUp} />
           <Route exact path="/" component={Home} />
@@ -25,7 +25,7 @@ function App() {
           <Route>
             <Message height={400} children="NO ENCONTRADO" status="404" />
           </Route>
-        </Page>
+        </MusicApp>
       </Router>
     </AuthProvider>
   );

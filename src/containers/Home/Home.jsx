@@ -6,8 +6,6 @@ import { Menu, MenuItem } from '@material-ui/core';
 import SimpleBarReact from 'simplebar-react';
 import 'simplebar/src/simplebar.css';
 
-import { AuthContext } from '../../containers/Page';
-
 import CardLandscape from '../../components/Cards/CardLandscape';
 import CardSearch from '../../components/Cards/CardSearch';
 import CardTalent from '../../components/Cards/CardTalent';
