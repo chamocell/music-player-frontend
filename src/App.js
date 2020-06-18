@@ -18,10 +18,7 @@ function App() {
           <Route exact path="/login" component={Login} />
           <Route exact path="/signup" component={SignUp} />
           <Route exact path="/" component={Home} />
-          {/* <PrivateRoute path="/albums" component={Home} /> */}
-          {/* <PrivateRoute exact path="/artists" component={Home} /> */}
           <Route path="/artists/:id" component={ArtistContainer} />
-          {/* <PrivateRoute path="/favourites" component={Home} /> */}
           <Route>
             <Message height={400} children="NO ENCONTRADO" status="404" />
           </Route>
