@@ -17,9 +17,5 @@ export default function SimpleImage({
 }) {
   const classes = useStyles({ image, width, height });
 
-  return (
-    <React.Fragment>
-      <img className={classes.simpleImage} src={image} alt={alt} title={title} />
-    </React.Fragment>
-  );
+  return <img className={classes.simpleImage} src={image} alt={alt} title={title} />;
 }

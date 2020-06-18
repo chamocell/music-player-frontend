@@ -22,19 +22,19 @@ function Sidebar({ title }) {
     <nav className="sidebar">
       {title && <h3 className="sidebar-title">{title}</h3>}
       <SidebarItemList heading="General">
-        <SidebarItem exact href="/" icon={HomeIcon}>
+        <SidebarItem exact to="/" icon={HomeIcon}>
           Inicio
         </SidebarItem>
-        <SidebarItem href="/albums" icon={PictureIcon}>
+        <SidebarItem to="/albums" icon={PictureIcon}>
           Álbumes
         </SidebarItem>
-        <SidebarItem href="/artists" icon={UserIcon}>
+        <SidebarItem to="/artists" icon={UserIcon}>
           Artistas
         </SidebarItem>
       </SidebarItemList>
 
       <SidebarItemList heading="Playlist">
-        <SidebarItem href="/favourites" icon={MusicIcon}>
+        <SidebarItem to="/favourites" icon={MusicIcon}>
           Mis favoritas
         </SidebarItem>
       </SidebarItemList>

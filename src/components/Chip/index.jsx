@@ -21,9 +21,5 @@ const useStyles = makeStyles((theme) => ({
 export default function ChipContainer({ title, color, height }) {
   const classes = useStyles({ title, color, height });
 
-  return (
-    <React.Fragment>
-      <Chip className={classes.chip} label={title} />
-    </React.Fragment>
-  );
+  return <Chip className={classes.chip} label={title} />;
 }

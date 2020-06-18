@@ -1,22 +1,27 @@
-import React, { useContext, useState } from 'react';
-import { AuthContext } from './../../containers/Page';
+import React, { useState } from 'react';
 import { Redirect } from 'react-router-dom';
 import Button from './../Button';
 import logo from './../../assets/img/fazt.png';
 import { Link } from 'react-router-dom';
 
-export default function AuthHelper({ next, type, onSubmit }) {
-  const { user, setUser } = useContext(AuthContext);
+import useUser from '../../hooks/useUser';
+import useQuery from '../../hooks/useQuery';
+
+export default function AuthHelper({ type, onSubmit }) {
+  const { user, isLoggedIn } = useUser(false);
   const [email, setEmail] = useState('');
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [errorMsg, setErrorMsg] = useState('');
 
+  const query = useQuery();
+
+  if (isLoggedIn) return <Redirect to={query.get('next') || '/'} />;
+
   function defaultSubmitHandler() {
     if (!email || !password || (type === 'signup' && !username))
       return setErrorMsg('Debes llenar todos los campos!');
-    setUser({ email });
-    localStorage.setItem('user', email);
+    user.logIn({ email });
   }
 
   function handleSubmit(ev) {
@@ -28,8 +33,6 @@ export default function AuthHelper({ next, type, onSubmit }) {
     setErrorMsg('');
     func(e.target.value, ...args);
   }
-
-  if (user) return <Redirect to={next || '/'} />;
 
   return (
     <div className="login">

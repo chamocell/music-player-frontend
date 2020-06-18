@@ -1,5 +1,5 @@
-import Page, { AuthContext, MusicPlayerContext } from './Page';
+import Page, { MusicPlayerContext } from './Page';
 
-export { AuthContext, MusicPlayerContext };
+export { MusicPlayerContext };
 
 export default Page;

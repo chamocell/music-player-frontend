@@ -1,1 +1,0 @@
-# PrivateRoute component documentation

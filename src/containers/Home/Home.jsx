@@ -1,5 +1,4 @@
-import React, { useContext, useState, useEffect } from 'react';
-import { AuthContext } from '../../containers/Page';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import Grid from '@material-ui/core/Grid';
 
@@ -12,15 +11,11 @@ import Search from '../../components/Search/Search';
 
 // Requests
 import Artist from '../../requests/Artista/Artista';
+import useUser from '../../hooks/useUser';
 
 function Home() {
-  const { user, setUser } = useContext(AuthContext);
+  const { user } = useUser();
   const [artista, setArtista] = useState([]);
-
-  function handleClick() {
-    setUser();
-    localStorage.removeItem('user');
-  }
 
   const artists = useEffect(() => {
     Artist.get('?results=7').then((res) => {
@@ -35,7 +30,7 @@ function Home() {
         <CardTalent image="https://avatars3.githubusercontent.com/u/15000248?s=460&u=2e1dc6e71e73a162aef210b9807890c30bc48c1f&v=4" />
       </Grid>
       Welcome Back, {user.email}
-      <Button onClick={handleClick}>Log out</Button>
+      <Button onClick={user.logOut}>Log out</Button>
       <h1 className="titulo_home">
         Mis favoritos (
         {artista && artista.data && artista.data.results.length >= 0
