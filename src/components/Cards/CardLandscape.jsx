@@ -20,9 +20,7 @@ const useStyles = makeStyles((theme) => ({
     position: 'relative',
     margin: height * 0.06,
     backgroundSize: bgSize || '100%',
-    border: `1px solid ${
-      theme && theme.palette && theme.palette.primary && theme.palette.primary.main
-    }`,
+    border: `1px solid ${theme?.palette?.primary?.main}`,
     borderRadius: borderRadius || 6,
     boxShadow: '0 3px 5px 2px rgba(0, 0, 0, .3)',
     height: height || 136,
@@ -40,8 +38,7 @@ const useStyles = makeStyles((theme) => ({
       width: '100%',
       left: 0,
       top: 0,
-      background:
-        theme && theme.palette && theme.palette.primary && theme.palette.primary.main,
+      background: theme?.palette?.primary?.main,
       backgroundImage: `url(${defaultImage})`,
       backgroundSize: 80,
       backgroundPosition: 'center',
@@ -72,8 +69,7 @@ const useStyles = makeStyles((theme) => ({
     borderRadius: '70px',
     fontSize: 16,
     textTransform: 'lowercase',
-    background:
-      theme && theme.palette && theme.palette.primary && theme.palette.primary.main,
+    background: theme?.palette?.primary?.main,
     height: 'auto',
     padding: 8,
     margin: 5,

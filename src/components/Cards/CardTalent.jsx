@@ -18,9 +18,7 @@ const useStyles = makeStyles((theme) => ({
     margin: height * 0.06,
     backgroundSize: bgSize || 'cover',
     backgroundPosition: 'center',
-    border: `1px solid ${
-      theme && theme.palette && theme.palette.primary && theme.palette.primary.main
-    }`,
+    border: `1px solid ${theme?.palette?.primary?.main}`,
     borderRadius: borderRadius || '50%',
     height: height || 50,
     width: width || 50,
@@ -29,18 +27,14 @@ const useStyles = makeStyles((theme) => ({
       width: width + width * 0.06,
       height: height + height * 0.06,
       backgroundSize: bgSize + bgSize * 0.13,
-      border: `3px solid ${
-        theme && theme.palette && theme.palette.primary && theme.palette.primary.main
-      }`,
+      border: `3px solid ${theme?.palette?.primary?.main}`,
       margin: 0
     },
     '&:focus': {
       width: width + width * 0.13,
       height: height + height * 0.13,
       backgroundSize: bgSize + bgSize * 0.13,
-      border: `3px solid ${
-        theme && theme.palette && theme.palette.primary && theme.palette.primary.main
-      }`,
+      border: `3px solid ${theme?.palette?.primary?.main}`,
       margin: 0,
       outline: 'none'
     }
@@ -96,7 +90,7 @@ const CardTalent = ({
           <Typography className={classes.typographyTitle} variant="body1">
             {title}
           </Typography>
-          {true && infoTalent && (
+          {infoTalent && (
             <Typography className={classes.typographyRol} variant="body2" noWrap>
               {infoTalent}
             </Typography>

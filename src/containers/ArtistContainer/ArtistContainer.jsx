@@ -23,10 +23,7 @@ const ArtistContainer = () => {
 
   let match = useRouteMatch('/artists/:id');
 
-  const t =
-    artista &&
-    artista.data &&
-    artista.data.results.find((e) => (e.id.value = match.params.id));
+  const t = artista?.data?.results?.find((e) => (e.id.value = match.params.id));
 
   return (
     <div className="ArtistaContainer">
@@ -37,8 +34,8 @@ const ArtistContainer = () => {
       <CardArtist
         width={150}
         height={150}
-        title={t && t.name && t.name.first}
-        image={t && t.picture.large}
+        title={t?.name?.first}
+        image={t?.picture?.large}
         infoTalent="Artista"
       />
       <h1 className="titulo_home">Álbumes</h1>

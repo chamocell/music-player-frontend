@@ -12,9 +12,7 @@ const useStyles = makeStyles((theme) => ({
     margin: height * 0.06,
     backgroundSize: bgSize || 290,
     padding: 10,
-    border: `1px solid ${
-      theme && theme.palette && theme.palette.primary && theme.palette.primary.main
-    }`,
+    border: `1px solid ${theme?.palette?.primary?.main}`,
     borderRadius: borderRadius || 6,
     boxShadow: '0 3px 5px 2px rgba(0, 0, 0, .3)',
     height: height || 145,
