@@ -10,7 +10,7 @@ const useStyles = makeStyles((theme) => ({
     width: '280px',
     margin: 10,
     borderRadius: borderRadius || 6,
-    overflow: 'hidden'
+    overflow: 'auto'
   }),
   cardSearchImage: ({ bgSize, image }) => ({
     backgroundImage: `url(${
@@ -28,7 +28,7 @@ const useStyles = makeStyles((theme) => ({
   cardSearchContent: () => ({
     padding: 10,
     textAlign: 'left',
-    height: '100%',
+    height: 'auto',
     background: theme.palette.grayColor.main
   }),
   title: ({ width }) => ({
