@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Route } from 'react-router-dom';
 import Login from './containers/Login';
 import SignUp from './containers/SignUp';
 import Home from './containers/Home';
-import MusicApp from './containers/Page';
+import MusicApp from './containers/MusicApp';
 import ArtistContainer from './containers/ArtistContainer';
 
 import Message from './components/Message';

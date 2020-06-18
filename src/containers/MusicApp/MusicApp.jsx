@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import MusicPlayer from '../MusicPlayer';
 import Main from './../Main';
 import Sidebar from '../../containers/Sidebar';
