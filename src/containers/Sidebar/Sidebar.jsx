@@ -5,40 +5,36 @@ import { ReactComponent as PictureIcon } from './../../assets/icons/image.svg';
 import { ReactComponent as UserIcon } from './../../assets/icons/user.svg';
 import { ReactComponent as MusicIcon } from './../../assets/icons/music.svg';
 
-import { MusicPlayerContext } from '../../containers/Page';
+import { MusicPlayerContext } from '../../context/MusicPlayer';
 
 import Button from '../../components/Button';
 import SidebarItem from '../../components/SidebarItem/SidebarItem';
 import SidebarItemList from '../../components/SidebarItemList/SidebarItemList';
 
 function Sidebar({ title }) {
-  const { active, setActive } = useContext(MusicPlayerContext);
-
-  function toggleMusicPlayer() {
-    setActive(!active);
-  }
+  const { toggle: toggleMusicPlayer } = useContext(MusicPlayerContext);
 
   return (
     <nav className="sidebar">
       {title && <h3 className="sidebar-title">{title}</h3>}
       <SidebarItemList heading="General">
-        <SidebarItem exact href="/" icon={HomeIcon}>
+        <SidebarItem exact to="/" icon={HomeIcon}>
           Inicio
         </SidebarItem>
-        <SidebarItem href="/albums" icon={PictureIcon}>
+        <SidebarItem to="/albums" icon={PictureIcon}>
           Álbumes
         </SidebarItem>
-        <SidebarItem href="/artists" icon={UserIcon}>
+        <SidebarItem to="/artists" icon={UserIcon}>
           Artistas
         </SidebarItem>
       </SidebarItemList>
 
       <SidebarItemList heading="Playlist">
-        <SidebarItem href="/favourites" icon={MusicIcon}>
+        <SidebarItem to="/favourites" icon={MusicIcon}>
           Mis favoritas
         </SidebarItem>
       </SidebarItemList>
-      <Button onClick={() => toggleMusicPlayer()}>Toggle Music Player</Button>
+      <Button onClick={toggleMusicPlayer}>Toggle Music Player</Button>
     </nav>
   );
 }

@@ -1,12 +1,10 @@
-import React, { useContext, useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import Grid from '@material-ui/core/Grid';
 import { Menu, MenuItem } from '@material-ui/core';
 
 import SimpleBarReact from 'simplebar-react';
 import 'simplebar/src/simplebar.css';
-
-import { AuthContext } from '../../containers/Page';
 
 import CardLandscape from '../../components/Cards/CardLandscape';
 import CardSearch from '../../components/Cards/CardSearch';
@@ -15,16 +13,12 @@ import Search from '../../components/Search/Search';
 
 // Requests
 import Artist from '../../requests/Artista/Artista';
+import useUser from '../../hooks/useUser';
 
 function Home() {
-  const { user, setUser } = useContext(AuthContext);
+  const { user } = useUser();
   const [artista, setArtista] = useState([]);
   const [anchorEl, setAnchorEl] = useState(null);
-
-  function handleClick() {
-    setUser();
-    localStorage.removeItem('user');
-  }
 
   const avatarClick = (event) => {
     setAnchorEl(event.currentTarget);
@@ -45,7 +39,10 @@ function Home() {
       <Grid container direction="row" justify="space-between" alignItems="flex-start">
         <Search search={artists} />
         Welcome Back, {user.email}
-        <CardTalent clickHandler={avatarClick} image="https://avatars3.githubusercontent.com/u/15000248?s=460&u=2e1dc6e71e73a162aef210b9807890c30bc48c1f&v=4" />
+        <CardTalent
+          clickHandler={avatarClick}
+          image="https://avatars3.githubusercontent.com/u/15000248?s=460&u=2e1dc6e71e73a162aef210b9807890c30bc48c1f&v=4"
+        />
         <Menu
           anchorEl={anchorEl}
           keepMounted
@@ -54,7 +51,7 @@ function Home() {
         >
           <MenuItem onClick={handleClose}>Perfil</MenuItem>
           <MenuItem onClick={handleClose}>Mi Cuenta</MenuItem>
-          <MenuItem onClick={handleClose && handleClick}>Salir</MenuItem>
+          <MenuItem onClick={user.logOut}>Salir</MenuItem>
         </Menu>
       </Grid>
       <h1 className="titulo_home">

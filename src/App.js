@@ -1,29 +1,30 @@
 import React from 'react';
-import { Route } from 'react-router-dom';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 
 import Login from './containers/Login';
 import SignUp from './containers/SignUp';
 import Home from './containers/Home';
-import Page from './containers/Page';
+import MusicApp from './containers/MusicApp';
 import ArtistContainer from './containers/ArtistContainer';
 
-import PrivateRoute from './components/PrivateRoute';
 import Message from './components/Message';
+import AuthProvider from './context/Auth';
 
 function App() {
   return (
-    <Page>
-      <Route exact path="/login" component={Login} />
-      <Route exact path="/signup" component={SignUp} />
-      <PrivateRoute exact path="/" component={Home} />
-      {/* <PrivateRoute path="/albums" component={Home} /> */}
-      {/* <PrivateRoute exact path="/artists" component={Home} /> */}
-      <PrivateRoute path="/artists/:id" component={ArtistContainer} />
-      {/* <PrivateRoute path="/favourites" component={Home} /> */}
-      <Route>
-        <Message height={400} children="NO ENCONTRADO" status="404" />
-      </Route>
-    </Page>
+    <AuthProvider>
+      <Router>
+        <MusicApp>
+          <Route exact path="/login" component={Login} />
+          <Route exact path="/signup" component={SignUp} />
+          <Route exact path="/" component={Home} />
+          <Route path="/artists/:id" component={ArtistContainer} />
+          <Route>
+            <Message height={400} children="NO ENCONTRADO" status="404" />
+          </Route>
+        </MusicApp>
+      </Router>
+    </AuthProvider>
   );
 }
 
