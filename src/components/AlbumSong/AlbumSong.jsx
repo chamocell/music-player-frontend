@@ -1,9 +1,9 @@
 import React from 'react';
 import moment from 'moment';
 
-export default function AlbumSong({ song, index, className }) {
+export default function AlbumSong({ song, index }) {
   return (
-    <li className={'album-song ' + className}>
+    <li className={'album-song'}>
       <div className="album-song-index">{index}</div>
       <div className="album-song-title">{song.title}</div>
       <div className="album-song-length">
