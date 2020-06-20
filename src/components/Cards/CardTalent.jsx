@@ -9,16 +9,17 @@ const useStyles = makeStyles((theme) => ({
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'center',
-    alignItems: 'flex-start'
+    alignItems: 'flex-start',
+    margin: '8px'
     //padding: '20px'
   },
   cardTalent: ({ width, height, bgSize, borderRadius, image }) => ({
     backgroundImage: `url(${image ? image : imageDefault})`,
     position: 'relative',
-    margin: height * 0.06,
+    margin: height * 0.04,
     backgroundSize: bgSize || 'cover',
     backgroundPosition: 'center',
-    border: `1px solid ${theme?.palette?.primary?.main}`,
+    // border: `1px solid ${theme?.palette?.primary?.main}`,
     borderRadius: borderRadius || '50%',
     height: height || 50,
     width: width || 50,
@@ -46,12 +47,13 @@ const useStyles = makeStyles((theme) => ({
     color: 'black',
     //marginTop: 5,
     fontSize: 15,
+    fontWeight: 'bold',
     textAlign: 'center',
     width: width
   }),
   typographyRol: ({ width }) => ({
     color: 'black',
-    fontSize: 12,
+    fontSize: 13,
     textAlign: 'center',
     width: width
   })
@@ -86,7 +88,10 @@ const CardTalent = ({
         onFocus={(e) => {}}
         onKeyUp={(e) => {}}
       >
-        <div className={classes.infoCard}>
+        
+        {children}
+      </div>
+      <div className={classes.infoCard}>
           <Typography className={classes.typographyTitle} variant="body1">
             {title}
           </Typography>
@@ -96,8 +101,6 @@ const CardTalent = ({
             </Typography>
           )}
         </div>
-        {children}
-      </div>
     </div>
   );
 };
