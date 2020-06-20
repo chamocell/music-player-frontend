@@ -9,12 +9,7 @@ import useUser from '../../hooks/useUser';
 
 // Requests
 import Artist from '../../requests/Artista/Artista';
-
-const genres = [
-  { id: 1, name: 'Hip-hop' },
-  { id: 2, name: 'Rock' },
-  { id: 3, name: 'Salsa' }
-];
+import genres from '../../Mocks/mock-genres';
 
 const Artists = () => {
   const { user } = useUser();

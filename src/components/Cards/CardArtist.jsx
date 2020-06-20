@@ -5,54 +5,12 @@ import Grid from '@material-ui/core/Grid';
 
 const imageDefault = require('./images/placeholder-actor.png');
 
-const theme = {
-  palette: {
-    primary: {
-      //light: '#757ce8',
-      main: '#47536b'
-      //dark: '#002884',
-      //contrastText: '#fff',
-    },
-    secondary: {
-      //light: '#ff7961',
-      main: '#e1251b'
-      //dark: '#ba000d',
-      //contrastText: '#000',
-    },
-    grayColor: {
-      main: '#212224'
-    },
-    fontColorPrimary: {
-      main: '#99CBFF'
-    },
-    colorActive: {
-      main: '#47536b'
-    }
-  },
-  shadowBox: {
-    generic: '0 3px 5px 2px rgba(0, 0, 0, .4)'
-  },
-  typography: {
-    //fontFamily: ['Roboto'].join(','),
-    subtitle1: {
-      fontSize: 12
-    },
-    body1: {
-      fontWeight: 500
-    },
-    button: {
-      fontStyle: 'italic'
-    }
-  }
-};
-
-const useStyles = makeStyles(() => ({
+const useStyles = makeStyles((theme) => ({
   containerCardArtist: {
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'center',
     alignItems: 'flex-start'
-    //padding: '20px'
   },
   CardArtist: ({ width, height, bgSize, borderRadius, image }) => ({
     backgroundImage: `url(${image ? image : imageDefault})`,
