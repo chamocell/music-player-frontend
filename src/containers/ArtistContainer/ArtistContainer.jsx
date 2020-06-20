@@ -12,7 +12,7 @@ import Search from '../../components/Search/Search';
 // Requests
 import Artist from '../../requests/Artista/Artista';
 
-const ArtistContainer = () => {
+const ArtistContainer = (history) => {
   const [artista, setArtista] = useState([]);
 
   useEffect(() => {
