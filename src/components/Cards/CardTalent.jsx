@@ -88,19 +88,18 @@ const CardTalent = ({
         onFocus={(e) => {}}
         onKeyUp={(e) => {}}
       >
-        
         {children}
       </div>
       <div className={classes.infoCard}>
-          <Typography className={classes.typographyTitle} variant="body1">
-            {title}
+        <Typography className={classes.typographyTitle} variant="body1">
+          {title}
+        </Typography>
+        {infoTalent && (
+          <Typography className={classes.typographyRol} variant="body2" noWrap>
+            {infoTalent}
           </Typography>
-          {infoTalent && (
-            <Typography className={classes.typographyRol} variant="body2" noWrap>
-              {infoTalent}
-            </Typography>
-          )}
-        </div>
+        )}
+      </div>
     </div>
   );
 };

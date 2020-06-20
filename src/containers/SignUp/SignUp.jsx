@@ -1,6 +1,6 @@
 import React from 'react';
 import AuthHelper from '../../components/AuthHelper';
 
-export default function SignUp({ location: { next } }) {
-  return <AuthHelper type="signup" next={next} />;
+export default function SignUp() {
+  return <AuthHelper type="signup" />;
 }

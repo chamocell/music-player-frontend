@@ -6,13 +6,13 @@ export default function MusicPlayerProvider({ children }) {
   const [musicPlayerActive, setMusicPlayerActive] = useState(false);
   const [musicPlayerPlaying, setMusicPlayerPlaying] = useState(false);
 
-  function toggle() {
-    setMusicPlayerPlaying((playing) => !playing);
-    setMusicPlayerActive((active) => !active);
-  }
-
   function togglePlaying() {
     setMusicPlayerPlaying((playing) => !playing);
+  }
+
+  function toggle() {
+    togglePlaying();
+    setMusicPlayerActive((active) => !active);
   }
 
   function play(song) {
