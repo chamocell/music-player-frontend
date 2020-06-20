@@ -18,17 +18,8 @@ import useUser from '../../hooks/useUser';
 function Home() {
   const { user } = useUser();
   const [artista, setArtista] = useState([]);
-  const [anchorEl, setAnchorEl] = useState(null);
 
-  const avatarClick = (event) => {
-    setAnchorEl(event.currentTarget);
-  };
-
-  const handleClose = () => {
-    setAnchorEl(null);
-  };
-
-  const artists = useEffect(() => {
+  useEffect(() => {
     Artist.get('?results=7').then((res) => {
       setArtista(res);
     });
@@ -36,25 +27,7 @@ function Home() {
 
   return (
     <div className="home">
-      <Grid container direction="row" justify="space-between" alignItems="flex-start">
-        <Search search={artists} />
-        Welcome Back, {user.email}
-        <CardTalent
-          clickHandler={avatarClick}
-          image="https://avatars3.githubusercontent.com/u/15000248?s=460&u=2e1dc6e71e73a162aef210b9807890c30bc48c1f&v=4"
-        />
-        <Menu
-          anchorEl={anchorEl}
-          keepMounted
-          onClose={handleClose}
-          open={Boolean(anchorEl)}
-        >
-          <MenuItem onClick={handleClose}>Perfil</MenuItem>
-          <MenuItem onClick={handleClose}>Mi Cuenta</MenuItem>
-          <MenuItem onClick={user.logOut}>Salir</MenuItem>
-        </Menu>
-      </Grid>
-      <h1 className="titulo_home">
+      <h1 className="section-title">
         Mis favoritos ({artista?.data?.results?.length || 0})
       </h1>
       <Grid container direction="row" justify="flex-start" alignItems="flex-start">
@@ -68,7 +41,7 @@ function Home() {
         />
       </Grid>
       <br></br>
-      <h1 className="titulo_home">Álbumes más recientes</h1>
+      <h1 className="section-title">Álbumes más recientes</h1>
       <SimpleBarReact
         direction="rtl"
         autoHide={false}
@@ -87,7 +60,7 @@ function Home() {
         </Grid>
       </SimpleBarReact>
       <br></br>
-      <h1 className="titulo_home">Sencillos más recientes</h1>
+      <h1 className="section-title">Sencillos más recientes</h1>
       <SimpleBarReact
         direction="rtl"
         autoHide={false}
@@ -106,7 +79,7 @@ function Home() {
         </Grid>
       </SimpleBarReact>
       <br></br>
-      <h1 className="titulo_home">Artistas destacados</h1>
+      <h1 className="section-title">Artistas destacados</h1>
       <SimpleBarReact
         direction="rtl"
         autoHide={false}
