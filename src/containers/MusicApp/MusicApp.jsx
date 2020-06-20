@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import MusicPlayer from '../MusicPlayer';
 import Main from './../Main';
 import Sidebar from '../../containers/Sidebar';
@@ -10,10 +10,7 @@ import CardTalent from '../../components/Cards/CardTalent';
 import { Switch } from 'react-router-dom';
 import useUser from '../../hooks/useUser';
 
-import MusicPlayerProvider from '../../context/MusicPlayer';
-
-// Requests
-import Artist from '../../requests/Artista/Artista';
+import {MusicPlayerProvider} from '../../context/MusicPlayer';
 
 export default function MusicApp({ children }) {
   const { isLoggedIn, user } = useUser(false);
