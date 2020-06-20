@@ -8,12 +8,8 @@ import 'simplebar/src/simplebar.css';
 
 // Requests
 import Artist from '../../requests/Artista/Artista';
+import genres from '../../Mocks/mock-genres';
 
-const genres = [
-  { id: 1, name: 'Hip-hop' },
-  { id: 2, name: 'Rock' },
-  { id: 3, name: 'Salsa' }
-];
 
 const Artists = () => {
   const [artistas, setArtistas] = useState([]);
