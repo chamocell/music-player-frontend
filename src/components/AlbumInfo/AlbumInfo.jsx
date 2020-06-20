@@ -1,8 +1,14 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import Button from '../Button';
+import MusicPlayerContext from '../../context/MusicPlayer';
 
 export default function AlbumInfo({ album }) {
   const imageAlt = `${album.title}'s Cover`;
+  const { play } = useContext(MusicPlayerContext);
+
+  function playAlbum() {
+    play();
+  }
 
   return (
     <>
@@ -15,7 +21,7 @@ export default function AlbumInfo({ album }) {
           <p>{album.songs.length} canciones</p>
           <p>{album.year}</p>
         </div>
-        <Button primary className="album-button">
+        <Button primary className="album-button" onClick={playAlbum}>
           Reproducir
         </Button>
       </div>
