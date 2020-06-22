@@ -1,11 +1,7 @@
-import React, { useState } from 'react';
+import React from 'react';
 import MusicPlayer from '../MusicPlayer';
 import Main from './../Main';
 import Sidebar from '../../containers/Sidebar';
-import Search from '../../components/Search/Search';
-import Grid from '@material-ui/core/Grid';
-import { Menu, MenuItem } from '@material-ui/core';
-import CardTalent from '../../components/Cards/CardTalent';
 import UserNav from '../../components/UserNav/UserNav';
 
 import { Switch } from 'react-router-dom';

@@ -11,7 +11,8 @@ import Artist from '../../requests/Artista/Artista';
 import genres from '../../Mocks/mock-genres';
 
 const Artists = () => {
-  const { user } = useUser();
+  // const { user } = useUser();
+  useUser();
   const [artistas, setArtistas] = useState([]);
 
   useEffect(() => {

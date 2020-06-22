@@ -9,7 +9,7 @@ import AlbumInfo from '../../components/AlbumInfo';
 import albumMock from '../../Mocks/mock-album';
 
 export default function Album() {
-  const { user } = useUser();
+  useUser();
   const { id } = useParams();
   const [album, setAlbum] = useState({});
   const [loading, setLoading] = useState(true);
