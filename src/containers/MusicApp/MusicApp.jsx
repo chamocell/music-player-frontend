@@ -10,7 +10,7 @@ import useUser from '../../hooks/useUser';
 import { MusicPlayerProvider } from '../../context/MusicPlayer';
 
 export default function MusicApp({ children }) {
-  const { isLoggedIn } = useUser(false);
+  const { isLoggedIn } = useUser();
 
   return (
     <MusicPlayerProvider>

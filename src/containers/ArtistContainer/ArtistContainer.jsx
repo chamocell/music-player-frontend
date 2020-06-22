@@ -6,13 +6,10 @@ import SlideContainer from '../SlideContainer';
 import CardSearch from '../../components/Cards/CardSearch';
 import CardArtist from '../../components/Cards/CardArtist';
 
-import useUser from '../../hooks/useUser';
-
 // Requests
 import Artist from '../../requests/Artista/Artista';
 
 const ArtistContainer = (history) => {
-  useUser();
   const [artista, setArtista] = useState([]);
 
   useEffect(() => {
