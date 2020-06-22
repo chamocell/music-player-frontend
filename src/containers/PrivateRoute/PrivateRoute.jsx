@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useContext } from 'react';
+import React, { useContext } from 'react';
 import { AuthContext } from '../../context/Auth';
 import { Route, Redirect, useLocation } from 'react-router-dom';
 
@@ -15,7 +15,7 @@ export default function PrivateRoute({ component: Component, ...rest }) {
       redirectUrl += '?next=' + url;
     }
 
-    return <Redirect to={url} />;
+    return <Redirect to={redirectUrl} />;
   }
 
   return <Route {...rest} render={handleRender} />;
