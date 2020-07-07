@@ -24,9 +24,7 @@ export default function Album() {
 
   return (
     <div className="album">
-      <section className="album-info">
-        <AlbumInfo album={album} />
-      </section>
+      <AlbumInfo album={album} />
       <section className="album-songs">
         <AlbumSongs songs={album.songs} />
       </section>
