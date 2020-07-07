@@ -1,15 +1,11 @@
+import AlbumInfo from '@components/AlbumInfo';
+import AlbumSongs from '@components/AlbumSongs';
+// Requests
+import albumMock from '@Mocks/mock-album';
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 
-import useUser from '@hooks/useUser';
-import AlbumSongs from '@components/AlbumSongs';
-import AlbumInfo from '@components/AlbumInfo';
-
-// Requests
-import albumMock from '@Mocks/mock-album';
-
 export default function Album() {
-  const { user } = useUser();
   const { id } = useParams();
   const [album, setAlbum] = useState({});
   const [loading, setLoading] = useState(true);
